@@ -16,13 +16,15 @@ import { Explore } from "./Components/Explore/Explore";
 import { Language } from "./Components/Language/Language";
 import { CreateKoo } from "./Components/CreateKoo/CreateKoo";
 import { Notification } from "./Components/Notification/Notification";
+import LandingPage from "./Components/LandingPage/LandingPage";
 import About from "./Components/Widgets/About";
 function App() {
   return (
     <div className="App">
       <div>
         <Routes>
-          <Route path="/" element={<Feed />}></Route>
+          <Route path="/" element={<LandingPage />}></Route>
+          <Route path="/feed" element={<Feed />}></Route>
           <Route path="/addinput" element={<AddInput />}></Route>
           <Route path="/people" element={<People />}></Route>
           <Route path="/trending" element={<Trending />}></Route>
