@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LandingPage.css";
 import LoginPopUp from "./LoginPopUp";
 
 const LandingPage = () => {
+    const [popup, setPopup] = useState(false);
   return (
     <div>
       <div className="navContainer">
@@ -45,10 +46,13 @@ const LandingPage = () => {
             <img
               src="https://img.icons8.com/small/96/000000/user-male-circle.png"
               alt="profile"
+              onClick={()=>{
+                  setPopup(true)
+              }}
             />
           </div>
         </div>
-        <LoginPopUp trigger={true} ><h3>Login popup</h3></LoginPopUp>
+        <LoginPopUp trigger={popup} settrigger={setPopup} ><h3>Login popup</h3></LoginPopUp>
       </div>
 
       <div className="pg-container">
