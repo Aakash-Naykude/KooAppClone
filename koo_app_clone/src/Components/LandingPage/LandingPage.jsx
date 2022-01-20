@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LandingPage.css";
 
 const LandingPage = () => {
@@ -61,7 +62,11 @@ const LandingPage = () => {
               </div>
             </div>
             <br />
-            <button className="cent-box-btn">Go to Feed</button>
+
+            <Link to="/feed">
+              <button className="cent-box-btn">Go to Feed </button>
+            </Link>
+
             <a href="/">
               <img
                 className="store-btn"

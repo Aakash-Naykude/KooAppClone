@@ -172,7 +172,7 @@ function AddInput() {
       >
         <div id="cont1">
           <div id="insidecont1">
-            <Link to={"/"}>
+            <Link to={"/feed"}>
               <img
                 className="returnhomelogo"
                 src="https://www.kooapp.com/img/backArrowMinimal.svg"

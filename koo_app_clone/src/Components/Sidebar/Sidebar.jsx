@@ -8,14 +8,14 @@ function Sidebar() {
   return (
     <div className="hidden sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full">
       <div id="tabcont" className="space-y-2.5 mt-4 mb-2.5 xl:ml-24">
-        <Link to="/">
+        <Link to="/feed">
           <img
             className="koo-logo"
             src="https://www.kooapp.com/assets/2d634360.svg"
             alt="mainlogo"
           />
         </Link>
-        <Link to="/">
+        <Link to="/feed">
             <SidebarOptions
               active
               Icon={"https://www.kooapp.com/assets/bce0173d.svg"}
