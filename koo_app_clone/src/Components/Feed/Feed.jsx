@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../Context/UserContext";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./Feed.css";
 export const Feed = () => {
   const [list, setList] = useState([]);
+  const { handleUsername, username } = useContext(UserContext);
 
+  handleUsername("test");
   useEffect(() => {
     getList();
   }, []);
@@ -145,7 +148,7 @@ export const Feed = () => {
             {list.map((e) => (
               <div key={e._id}>
                 <h1>{e.postdata}</h1>
-                <img style={{width:"150px"}} src={e.imageupload} alt="img" />
+                <img style={{ width: "150px" }} src={e.imageupload} alt="img" />
               </div>
             ))}
           </div>

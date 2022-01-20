@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../Context/UserContext";
 import "./LandingPage.css";
 
 const LandingPage = () => {
+  const {handleUsername} = useContext(UserContext)
+  //handleUsername("test")
   return (
     <div>
       <div className="navContainer">
