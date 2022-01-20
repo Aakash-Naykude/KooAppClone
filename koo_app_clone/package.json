@@ -13,7 +13,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "emoji-mart": "^3.0.1",
-    "firebase": "^9.6.3",
+    "firebase": "^8.6.2-2021418232615",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
