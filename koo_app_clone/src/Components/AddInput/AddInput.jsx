@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import "./Addinput.css";
 import { Picker } from "emoji-mart";
 import "emoji-mart/css/emoji-mart.css";
-import { db, storage } from "../../firebase";
-import { getDownloadURL, ref, uploadString } from "@firebase/storage";
-import {
-  addDoc,
-  collection,
-  doc,
-  serverTimestamp,
-  updateDoc,
-} from "@firebase/firestore";
+// import { db, storage } from "../../firebase";
+// import { getDownloadURL, ref, uploadString } from "@firebase/storage";
+// import {
+//   addDoc,
+//   collection,
+//   doc,
+//   serverTimestamp,
+//   updateDoc,
+// } from "@firebase/firestore";
 import "./Modal.css";
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;

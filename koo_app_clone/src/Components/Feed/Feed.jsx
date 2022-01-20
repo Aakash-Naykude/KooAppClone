@@ -4,6 +4,7 @@ import { UserContext } from "../../Context/UserContext";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./Feed.css";
+import Viewpost from "./Viewpost";
 export const Feed = () => {
   const [list, setList] = useState([]);
   const { handleUsername, username } = useContext(UserContext);
@@ -139,17 +140,15 @@ export const Feed = () => {
               </div>
             </div>
           </Link>
-          <h1>Feed</h1>
-          {/* <Input /> */}
+
+
+
+
+
+
           <div className="pb-72">
-            {/* {posts.map((post) => (
-        <Post key={post.id} id={post.id} post={post.data()} />
-      ))} */}
             {list.map((e) => (
-              <div key={e._id}>
-                <h1>{e.postdata}</h1>
-                <img style={{ width: "150px" }} src={e.imageupload} alt="img" />
-              </div>
+              <Viewpost key={e._id} title={e.postdata} image={e.imageupload} />
             ))}
           </div>
         </div>
