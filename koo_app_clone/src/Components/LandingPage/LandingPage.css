@@ -59,13 +59,15 @@
   .kooicons {
       display: flex;
       justify-content:space-evenly;
-      margin-left: 20% !important;
+      margin-left: 5% !important;
   }
   .kooicons img{
-      margin-right: 12%;
+      margin-right: 10%;
       /* margin-left: 10%; */
       padding-right: 2%;
       width: 30px;
+      cursor: pointer;
+      color: gray;
   }
   .pg-container{
       background-image: url(https://www.kooapp.com/img/landingbackground.png);
