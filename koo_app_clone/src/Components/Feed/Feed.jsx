@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../Context/UserContext";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./Feed.css";
 export const Feed = () => {
+  const [list, setList] = useState([]);
+  const { handleUsername, username } = useContext(UserContext);
+
+  handleUsername("test");
+  useEffect(() => {
+    getList();
+  }, []);
+  const getList = () => {
+    fetch("http://localhost:4000/userid/post")
+      .then((res) => res.json())
+      .then((json) => setList(json));
+  };
+  console.log(list);
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -16,7 +30,7 @@ export const Feed = () => {
             id="header"
             className="bg-[#F8F7F3] border-gray-700 sticky top-0 z-40 "
           >
-            <Link to="/">
+            <Link to="/feed">
               <h2
                 id="heads"
                 className="text-lg sm:text-xl text-[#7D8889] font-bold"
@@ -131,6 +145,12 @@ export const Feed = () => {
             {/* {posts.map((post) => (
         <Post key={post.id} id={post.id} post={post.data()} />
       ))} */}
+            {list.map((e) => (
+              <div key={e._id}>
+                <h1>{e.postdata}</h1>
+                <img style={{ width: "150px" }} src={e.imageupload} alt="img" />
+              </div>
+            ))}
           </div>
         </div>
         <Widgets />

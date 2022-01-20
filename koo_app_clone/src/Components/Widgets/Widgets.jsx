@@ -34,11 +34,13 @@ function Widgets({ trendingResults, followResults }) {
                       src="https://img.icons8.com/ios-filled/50/000000/circled-n.png"
                       alt="3"
                     />
-                    <img
-                      className="add"
-                      src="https://img.icons8.com/material-outlined/24/000000/plus--v1.png"
-                      alt="1"
-                    />
+                    <Link to="/addinput" >
+                      <img
+                        className="add"
+                        src="https://img.icons8.com/material-outlined/24/000000/plus--v1.png"
+                        alt="1"
+                      />
+                    </Link>
                   </div>
                 </span>
               </div>
@@ -60,12 +62,13 @@ function Widgets({ trendingResults, followResults }) {
                       src="https://img.icons8.com/ios/50/000000/circled-k.png"
                       alt="5"
                     />
-
-                    <img
-                      className="add"
-                      src="https://img.icons8.com/material-outlined/24/000000/plus--v1.png"
-                      alt="1"
-                    />
+                    <Link to="/addinput">
+                      <img
+                        className="add"
+                        src="https://img.icons8.com/material-outlined/24/000000/plus--v1.png"
+                        alt="1"
+                      />
+                    </Link>
                   </div>
                 </span>
               </div>
@@ -87,11 +90,13 @@ function Widgets({ trendingResults, followResults }) {
                       src="https://img.icons8.com/ios-filled/50/000000/v-bucks.png"
                       alt="1"
                     />
-                    <img
-                      className="add"
-                      src="https://img.icons8.com/material-outlined/24/000000/plus--v1.png"
-                      alt="1"
-                    />
+                    <Link to="/addinput">
+                      <img
+                        className="add"
+                        src="https://img.icons8.com/material-outlined/24/000000/plus--v1.png"
+                        alt="1"
+                      />
+                    </Link>
                   </div>
                 </span>
               </div>
@@ -113,11 +118,13 @@ function Widgets({ trendingResults, followResults }) {
                       src="https://img.icons8.com/dotty/80/000000/circled-d.png"
                       alt="1"
                     />
-                    <img
-                      className="add"
-                      src="https://img.icons8.com/material-outlined/24/000000/plus--v1.png"
-                      alt="1"
-                    />
+                    <Link to="/addinput">
+                      <img
+                        className="add"
+                        src="https://img.icons8.com/material-outlined/24/000000/plus--v1.png"
+                        alt="1"
+                      />
+                    </Link>
                   </div>
                 </span>
               </div>
@@ -139,11 +146,13 @@ function Widgets({ trendingResults, followResults }) {
                       src="https://img.icons8.com/color/48/000000/xbox-b--v1.png"
                       alt="3"
                     />
-                    <img
-                      className="add"
-                      src="https://img.icons8.com/material-outlined/24/000000/plus--v1.png"
-                      alt="1"
-                    />
+                    <Link to="/addinput">
+                      <img
+                        className="add"
+                        src="https://img.icons8.com/material-outlined/24/000000/plus--v1.png"
+                        alt="1"
+                      />
+                    </Link>
                   </div>
                 </span>
               </div>
