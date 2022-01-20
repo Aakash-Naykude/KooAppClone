@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./Feed.css";
 export const Feed = () => {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    getList();
+  }, []);
+  const getList = () => {
+    fetch("http://localhost:4000/userid/post")
+      .then((res) => res.json())
+      .then((json) => setList(json));
+  };
+  console.log(list);
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -131,6 +142,12 @@ export const Feed = () => {
             {/* {posts.map((post) => (
         <Post key={post.id} id={post.id} post={post.data()} />
       ))} */}
+            {list.map((e) => (
+              <div key={e._id}>
+                <h1>{e.postdata}</h1>
+                <img style={{width:"150px"}} src={e.imageupload} alt="img" />
+              </div>
+            ))}
           </div>
         </div>
         <Widgets />
