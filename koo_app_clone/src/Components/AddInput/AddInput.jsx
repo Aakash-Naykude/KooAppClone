@@ -30,7 +30,7 @@ function AddInput() {
   const [showEmojis, setShowEmojis] = useState(false);
 
   const [isListening, setIsListening] = useState(false);
-  const sendPost = async () => {
+  const sendPost = () => {
     if (loading) return;
     setLoading(true);
     // const docRef = await addDoc(collection(db, "posts"), {
@@ -41,21 +41,48 @@ function AddInput() {
     //   text: input,
     //   timestamp: serverTimestamp(),
     // });
-
-    const imageRef = ref(storage, `posts/image`);
-
-    if (selectedFile) {
-      await uploadString(imageRef, selectedFile, "data_url").then(async () => {
-        const downloadURL = await getDownloadURL(imageRef);
-        //console.log(downloadURL);
-        //console.log(selectedFile);
-        await updateDoc(doc(db, "posts/image"), {
-          image: downloadURL,
-        });
-      });
-    }
-
+    
+    
+    
+    
+    //console.log(downloadURL);
     console.log(selectedFile);
+    const postData = {
+      postdata: input,
+      username: "fakeuser",
+      imageupload:selectedFile
+    };
+    console.log(postData);
+    fetch("http://localhost:4000/userid/post", {
+      method: "POST",
+      body: JSON.stringify(postData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    // const imageRef = ref(storage, `posts/image`);
+
+    // if (selectedFile) {
+    //   await uploadString(imageRef, selectedFile, "data_url").then(async () => {
+    //     const downloadURL = await getDownloadURL(imageRef);
+    //     //console.log(downloadURL);
+    //     //console.log(selectedFile);
+    //     await updateDoc(doc(db, "posts/image"), {
+    //       image: downloadURL,
+    //     });
+    //   });
+    // }
+
+   // console.log(selectedFile);
     setLoading(false);
     setInput("");
     setSelectedFile(null);
@@ -145,7 +172,7 @@ function AddInput() {
       >
         <div id="cont1">
           <div id="insidecont1">
-            <Link to={"/"}>
+            <Link to={"/feed"}>
               <img
                 className="returnhomelogo"
                 src="https://www.kooapp.com/img/backArrowMinimal.svg"

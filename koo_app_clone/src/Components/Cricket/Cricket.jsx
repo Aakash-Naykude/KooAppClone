@@ -16,7 +16,7 @@ export const Cricket = () => {
             id="header"
             className="bg-[#F8F7F3] border-gray-700 sticky top-0 z-40 "
           >
-            <Link to="/">
+            <Link to="/feed">
               <h2
                 id="heads"
                 className="text-lg sm:text-xl text-[#7D8889] font-bold"

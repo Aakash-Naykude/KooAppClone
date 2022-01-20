@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { UserContext } from "../../Context/UserContext";
 import "./LandingPage.css";
 import LoginPopUp from "./LoginPopUp";
 
 const LandingPage = () => {
+  const {handleUsername} = useContext(UserContext)
+  //handleUsername("test")
   return (
     <div>
       <div className="navContainer">
@@ -64,7 +68,11 @@ const LandingPage = () => {
               </div>
             </div>
             <br />
-            <button className="cent-box-btn">Go to Feed</button>
+
+            <Link to="/feed">
+              <button className="cent-box-btn">Go to Feed </button>
+            </Link>
+
             <a href="/">
               <img
                 className="store-btn"
