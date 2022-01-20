@@ -1,20 +1,15 @@
-<<<<<<< HEAD
+
 import React, { useState } from "react";
-=======
-import React, { useContext } from "react";
+
 import { Link } from "react-router-dom";
-import { UserContext } from "../../Context/UserContext";
->>>>>>> 117fbc99db093390dafc2fadd3b3b6f1c137b8d3
+
 import "./LandingPage.css";
 import LoginPopUp from "./LoginPopUp";
 
 const LandingPage = () => {
-<<<<<<< HEAD
+
     const [popup, setPopup] = useState(false);
-=======
-  const {handleUsername} = useContext(UserContext)
-  //handleUsername("test")
->>>>>>> 117fbc99db093390dafc2fadd3b3b6f1c137b8d3
+
   return (
     <div>
       <div className="navContainer">
