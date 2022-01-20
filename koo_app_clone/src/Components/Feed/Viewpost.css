@@ -1,0 +1,52 @@
+.maincont {
+  border: 1px solid #e0e0e0;
+  width: 93.5%;
+  margin-left: 3.25%;
+  margin-top: 10px;
+  background-color: #fdfdfd;
+  padding: 10px;
+  border-radius: 12px;
+}
+.cont1{
+    display: flex;
+    gap: 2%;
+}
+.profilepic{
+    width: 46px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.name{
+    font-size: 18px;
+    font-weight: 600;
+}
+.username{
+    margin-top: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.cont2{
+    width: 90%;
+    margin-left: 8.5%;
+    font-size: 18px;
+}
+.cont3{
+    width: 90%;
+    margin-left: 8.5%;
+    margin-top: 1.5%;
+}
+.cont3>img{
+    width: 100%;
+    max-height: 300px;
+    border-radius: 12px;
+}
+.cont4{
+    width: 90%;
+    margin-left: 8.5%;
+    border: 1px solid black;
+}
+.cont5{
+    width: 90%;
+    margin-left: 8.5%;
+    border: 1px solid black;
+}

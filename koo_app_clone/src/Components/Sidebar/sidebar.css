@@ -44,5 +44,28 @@
     border-radius: 25px;
     font-size: 18px;
     font-weight: 600;
-    margin-top: 15px;
+    margin-top: 18px;
+}
+#beforesignin{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    width: 140px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 18px;
+    margin-right: 45px;
+}
+
+#signin{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    width: 140px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 260px;
+    margin-right: 45px;
 }

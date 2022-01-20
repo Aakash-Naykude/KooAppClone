@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import "./Addinput.css";
 import { Picker } from "emoji-mart";
 import "emoji-mart/css/emoji-mart.css";
-import { db, storage } from "../../firebase";
-import { getDownloadURL, ref, uploadString } from "@firebase/storage";
-import {
-  addDoc,
-  collection,
-  doc,
-  serverTimestamp,
-  updateDoc,
-} from "@firebase/firestore";
+// import { db, storage } from "../../firebase";
+// import { getDownloadURL, ref, uploadString } from "@firebase/storage";
+// import {
+//   addDoc,
+//   collection,
+//   doc,
+//   serverTimestamp,
+//   updateDoc,
+// } from "@firebase/firestore";
 import "./Modal.css";
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -60,15 +60,15 @@ function AddInput() {
         "Content-Type": "application/json",
       },
     })
-      // .then((res) => {
-      //   return res.json();
-      // })
-      // .then((res) => {
-      //   console.log(res);
-      // })
-      // .catch((err) => {
-      //   console.log(err);
-      // });
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     // const imageRef = ref(storage, `posts/image`);
 
     // if (selectedFile) {
@@ -172,7 +172,7 @@ function AddInput() {
       >
         <div id="cont1">
           <div id="insidecont1">
-            <Link to={"/"}>
+            <Link to={"/feed"}>
               <img
                 className="returnhomelogo"
                 src="https://www.kooapp.com/img/backArrowMinimal.svg"

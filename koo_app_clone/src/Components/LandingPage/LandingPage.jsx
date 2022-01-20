@@ -1,7 +1,17 @@
-import React from "react";
+
+import React, { useState } from "react";
+
+
+import { Link } from "react-router-dom";
+
 import "./LandingPage.css";
+import LoginPopUp from "./LoginPopUp";
 
 const LandingPage = () => {
+
+  const [popup, setPopup] = useState(false);
+
+
   return (
     <div>
       <div className="navContainer">
@@ -42,12 +52,17 @@ const LandingPage = () => {
               alt="notification"
             />
             <img
-              src="https://www.kooapp.com/img/profilePlaceholderYellow.svg"
+              src="https://img.icons8.com/small/96/000000/user-male-circle.png"
               alt="profile"
+              onClick={() => {
+                setPopup(true);
+              }}
             />
           </div>
         </div>
+        <LoginPopUp trigger={popup} settrigger={setPopup}></LoginPopUp>
       </div>
+
       <div className="pg-container">
         <div className="wrap-pg">
           <div className="center-container">
@@ -61,7 +76,11 @@ const LandingPage = () => {
               </div>
             </div>
             <br />
-            <button className="cent-box-btn">Go to Feed</button>
+
+            <Link to="/feed">
+              <button className="cent-box-btn">Go to Feed </button>
+            </Link>
+
             <a href="/">
               <img
                 className="store-btn"
@@ -81,6 +100,7 @@ const LandingPage = () => {
           <div></div>
         </div>
       </div>
+
       <div className="footer-container">
         <div className="footer-wrap">
           <div className="footer-list">
