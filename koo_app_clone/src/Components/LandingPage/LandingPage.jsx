@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../Context/UserContext";
 import "./LandingPage.css";
+import LoginPopUp from "./LoginPopUp";
 
 const LandingPage = () => {
   const {handleUsername} = useContext(UserContext)
@@ -46,12 +47,14 @@ const LandingPage = () => {
               alt="notification"
             />
             <img
-              src="https://www.kooapp.com/img/profilePlaceholderYellow.svg"
+              src="https://img.icons8.com/small/96/000000/user-male-circle.png"
               alt="profile"
             />
           </div>
         </div>
+        <LoginPopUp trigger={true} ><h3>Login popup</h3></LoginPopUp>
       </div>
+
       <div className="pg-container">
         <div className="wrap-pg">
           <div className="center-container">
