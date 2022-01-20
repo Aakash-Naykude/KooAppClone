@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import "./Widgets.css";
 function Widgets({ trendingResults, followResults }) {
   return (
-    <div className="hidden lg:inline ml-8 xl:w-[370px] py-1 space-y-5">
-      <div>
+    <div className="hidden lg:inline ml-8 xl:w-[370px] py-1 space-y-5 sticky">
+      <div id="tabcont" className=" space-y-2.5 mt-4 mb-2.5 xl:ml-4 fixed">
         <div className="full-div">
           {/* search box */}
           <input type="text" className="search" placeholder="Search" />
