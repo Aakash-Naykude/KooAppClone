@@ -26,6 +26,28 @@ const LandingPage = () => {
             </div>
         </div>
       </div> 
+      <div className="pg-container">
+          <div className="wrap-pg">
+              <div className="center-container">
+                  <div className="cent-box">
+                      <div className="cent-box-in">
+                          <img className="cent-box-img" src="https://www.kooapp.com/img/logoSolidOutline.png" alt="logo" />
+                      </div>
+                  </div>
+                  <br />
+                  <button className="cent-box-btn">Go to Feed</button>
+                  <a href="/">
+                      <img className="store-btn" src="https://www.kooapp.com/img/googlePlayBadge.png" alt="" />
+                  </a>
+                  <a href="/">
+                      <img className="store-btn" src="https://www.kooapp.com/img/appStoreBadge.png" alt="" />
+                  </a>
+              </div>
+              <div style={{height:"200px"}}>
+              </div>
+              <div></div>
+          </div>
+      </div>
         </div>
     )
 }
