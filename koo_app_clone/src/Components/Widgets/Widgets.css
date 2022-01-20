@@ -11,7 +11,7 @@
     color:grey;
     cursor: pointer;
 }
-#questions > span:hover{
+#questions >span:hover{
     text-decoration: underline;
       
 }
