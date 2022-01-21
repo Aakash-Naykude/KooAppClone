@@ -24,8 +24,6 @@ function About() {
       <Link to="/about">About</Link>
     </div>
     <div className="copy">Copyright Koo 2022 ©</div>
-    <h1>Hello hello</h1>
-
   </div >
 }
 
