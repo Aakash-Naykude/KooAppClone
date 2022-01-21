@@ -1,17 +1,13 @@
 
-import React, { useState } from "react";
-
-
+import React, { useEffect, useState } from "react";
+import "firebase/auth";
 import { Link } from "react-router-dom";
-
 import "./LandingPage.css";
 import LoginPopUp from "./LoginPopUp";
 
+
 const LandingPage = () => {
-
-  const [popup, setPopup] = useState(false);
-
-
+const [popup, setPopup] = useState(false)
   return (
     <div>
       <div className="navContainer">
@@ -54,13 +50,11 @@ const LandingPage = () => {
             <img
               src="https://img.icons8.com/small/96/000000/user-male-circle.png"
               alt="profile"
-              onClick={() => {
-                setPopup(true);
-              }}
+              onClick={()=>{setPopup(true)}}
             />
           </div>
         </div>
-        <LoginPopUp trigger={popup} settrigger={setPopup}></LoginPopUp>
+        <LoginPopUp trigger={popup} settrigger={setPopup} ></LoginPopUp>
       </div>
 
       <div className="pg-container">

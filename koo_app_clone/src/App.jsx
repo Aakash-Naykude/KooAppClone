@@ -1,5 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+
 import { Feed } from "./Components/Feed/Feed";
 import AddInput from "./Components/AddInput/AddInput";
 import { People } from "./Components/People/People";
@@ -18,6 +19,7 @@ import { CreateKoo } from "./Components/CreateKoo/CreateKoo";
 import { Notification } from "./Components/Notification/Notification";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import About from "./Components/Widgets/About";
+
 function App() {
   return (
     <div className="App">
