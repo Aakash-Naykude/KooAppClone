@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../Context/UserContext";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./Profile.css";
 export const Profile = () => {
+  const { handleUsername, username } = useContext(UserContext);
+
+  handleUsername("test");
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -12,124 +16,29 @@ export const Profile = () => {
           id="feedcont"
           className="flex-grow bg-[#F8F7F3] sm:ml-[50px] xl:ml-[300px]"
         >
-          <div
-            id="header"
-            className="bg-[#F8F7F3] border-gray-700 sticky top-0 z-40 "
-          >
-            <Link to="/feed">
-              <h2
-                id="heads"
-                className="text-lg sm:text-xl text-[#7D8889] font-bold"
-              >
-                Feed
-              </h2>
-            </Link>
-
-            <Link to="/people">
-              <h2
-                id="heads"
-                className="text-lg  sm:text-xl  text-[#7D8889]  font-bold "
-              >
-                People
-              </h2>
-            </Link>
-
-            <Link to="/trending">
-              <h2
-                id="heads"
-                className="text-lg   sm:text-xl  text-[#7D8889]  font-bold"
-              >
-                Trending
-              </h2>
-            </Link>
-
-            <Link to="/upelections">
-              <h2
-                id="heads"
-                className="text-lg   sm:text-xl  text-[#7D8889]  font-bold"
-              >
-                UP Election
-              </h2>
-            </Link>
-            <Link to="/videos">
-              <h2
-                id="heads"
-                className="text-lg   sm:text-xl  text-[#7D8889]  font-bold"
-              >
-                Videos
-              </h2>
-            </Link>
-
-            <Link to="/polls">
-              <h2
-                id="heads"
-                className="text-lg   sm:text-xl  text-[#7D8889]  font-bold"
-              >
-                Polls
-              </h2>
-            </Link>
-
-            <Link to="/cricket">
-              <h2
-                id="heads"
-                className="text-lg   sm:text-xl  text-[#7D8889]  font-bold"
-              >
-                Cricket
-              </h2>
-            </Link>
-
-            <Link to="/following">
-              <h2
-                id="heads"
-                className="text-lg  sm:text-xl  text-[#7D8889]  font-bold"
-              >
-                Following
-              </h2>
-            </Link>
-
-            <Link to="/new">
-              <h2
-                id="heads"
-                className="text-lg   sm:text-xl  text-[#7D8889]  font-bold"
-              >
-                New
-              </h2>
-            </Link>
-
-            <Link to="/exclusive">
-              <h2
-                id="heads"
-                className="text-lg  sm:text-xl  text-[#7D8889]  font-bold"
-              >
-                Exclusive
-              </h2>
-            </Link>
-          </div>
-          <Link to="/addinput">
-            <div className="inputbar">
-              <div style={{ display: "flex" }}>
-                <img
-                  className="iconimage"
-                  src="https://www.kooapp.com/img/profilePlaceholderYellow.svg"
-                  alt="iconimage"
-                />
-                <p>What's on your mind...</p>
-              </div>
-              <div>
-                <img
-                  className="addiconlogo"
-                  src="https://www.kooapp.com/img/koo_create_24.svg"
-                  alt="addlogo"
-                />
-              </div>
+          <div className="cont1">
+            <div>
+              <img
+                src="https://www.kooapp.com/img/ic_back.svg"
+                alt="backtofeed"
+              />
+              <h1>Fake name</h1>
             </div>
-          </Link>
-          <h1>Profile</h1>
-          {/* <Input /> */}
-          <div className="pb-72">
-            {/* {posts.map((post) => (
-        <Post key={post.id} id={post.id} post={post.data()} />
-      ))} */}
+            <img
+              className="logo"
+              src="https://www.kooapp.com/img/stats.svg"
+              alt="fake"
+            />
+            <img
+              className="logo"
+              src="https://www.kooapp.com/img/kuhuShare.svg"
+              alt="fake"
+            />
+            <img
+              className="logo"
+              src="https://www.kooapp.com/assets/5dc2bdc8.svg"
+              alt="fake"
+            />
           </div>
         </div>
         <Widgets />

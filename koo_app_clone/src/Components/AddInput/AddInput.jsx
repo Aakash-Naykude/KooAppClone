@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Addinput.css";
 import { Picker } from "emoji-mart";
@@ -13,6 +13,7 @@ import "emoji-mart/css/emoji-mart.css";
 //   updateDoc,
 // } from "@firebase/firestore";
 import "./Modal.css";
+import { UserContext } from "../../Context/UserContext";
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 const mic = new SpeechRecognition();
@@ -29,10 +30,41 @@ function AddInput() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [showEmojis, setShowEmojis] = useState(false);
 
+  const { username } = useContext(UserContext);
+
   const [isListening, setIsListening] = useState(false);
   const sendPost = () => {
     if (loading) return;
     setLoading(true);
+
+    if (username) {
+      console.log(selectedFile);
+      const postData = {
+        postdata: input,
+        username: "fakeuser",
+        imageupload: selectedFile,
+      };
+      console.log(postData);
+      fetch("http://localhost:4000/userid/post", {
+        method: "POST",
+        body: JSON.stringify(postData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      alert(`Please Sign in first to make post`)
+    }
+
     // const docRef = await addDoc(collection(db, "posts"), {
     //   id: session.user.uid,
     //   username: session.user.name,
@@ -41,34 +73,9 @@ function AddInput() {
     //   text: input,
     //   timestamp: serverTimestamp(),
     // });
-    
-    
-    
-    
+
     //console.log(downloadURL);
-    console.log(selectedFile);
-    const postData = {
-      postdata: input,
-      username: "fakeuser",
-      imageupload:selectedFile
-    };
-    console.log(postData);
-    fetch("http://localhost:4000/userid/post", {
-      method: "POST",
-      body: JSON.stringify(postData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+
     // const imageRef = ref(storage, `posts/image`);
 
     // if (selectedFile) {
@@ -82,7 +89,7 @@ function AddInput() {
     //   });
     // }
 
-   // console.log(selectedFile);
+    // console.log(selectedFile);
     setLoading(false);
     setInput("");
     setSelectedFile(null);
