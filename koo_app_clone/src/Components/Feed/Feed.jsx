@@ -1,15 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../Context/UserContext";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./Feed.css";
 import Viewpost from "./Viewpost";
 export const Feed = () => {
   const [list, setList] = useState([]);
-  const { handleUsername, username } = useContext(UserContext);
-
-  handleUsername("test");
   useEffect(() => {
     getList();
   }, []);

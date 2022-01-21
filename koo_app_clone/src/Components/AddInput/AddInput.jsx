@@ -3,15 +3,6 @@ import { Link } from "react-router-dom";
 import "./Addinput.css";
 import { Picker } from "emoji-mart";
 import "emoji-mart/css/emoji-mart.css";
-// import { db, storage } from "../../firebase";
-// import { getDownloadURL, ref, uploadString } from "@firebase/storage";
-// import {
-//   addDoc,
-//   collection,
-//   doc,
-//   serverTimestamp,
-//   updateDoc,
-// } from "@firebase/firestore";
 import "./Modal.css";
 import { UserContext } from "../../Context/UserContext";
 const SpeechRecognition =
@@ -62,7 +53,7 @@ function AddInput() {
           console.log(err);
         });
     } else {
-      alert(`Please Sign in first to make post`)
+      alert(`Please Sign in first to make post`);
     }
 
     // const docRef = await addDoc(collection(db, "posts"), {
@@ -209,6 +200,7 @@ function AddInput() {
         </div>
         <div id="cont3">
           <input
+            style={{ padding: "10px" }}
             value={input}
             onChange={(e) => handleChange(e)}
             className="input"
@@ -221,8 +213,9 @@ function AddInput() {
             alt="speaker"
           />
         </div>
-        <div id="cont4">
-          <div className="icon" onClick={() => filePickerRef.current.click()}>
+
+        <div id="inputcont4">
+          <div onClick={() => filePickerRef.current.click()}>
             <input
               type="file"
               ref={filePickerRef}
@@ -234,7 +227,7 @@ function AddInput() {
               alt="selectimg"
             />
           </div>
-          <div className="icon" onClick={() => filePickerRef.current.click()}>
+          <div onClick={() => filePickerRef.current.click()}>
             <input
               type="file"
               ref={filePickerRef}
@@ -246,27 +239,31 @@ function AddInput() {
               alt="attachevideo"
             />
           </div>
-
-          <img
-            onClick={toggleModal}
-            src="https://www.kooapp.com/img/createMedia-link-new.svg"
-            alt="attachelink"
-          />
-
-          <div className="icon" onClick={() => setShowEmojis(!showEmojis)}>
+          <div>
             <img
+              onClick={toggleModal}
+              src="https://www.kooapp.com/img/createMedia-link-new.svg"
+              alt="attachelink"
+            />
+          </div>
+
+          <div onClick={() => setShowEmojis(!showEmojis)}>
+            <img
+              style={{ marginRight: "5px", marginLeft: "-5px" }}
               id="emoji"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Hbj3XayrW6APP7KSIWjbK5U-ovvwTK-uQjKJUmysjCl-EfAmyFEXDb3nOYOys5q2rZU&usqp=CAU"
               alt="attacheemoji"
             />
           </div>
-
-          <img
-            src="https://www.kooapp.com/img/polls-new.svg"
-            alt="attachepoll"
-          />
-
-          <p>{length}/400</p>
+          <div>
+            <img
+              src="https://www.kooapp.com/img/polls-new.svg"
+              alt="attachepoll"
+            />
+          </div>
+          <div>
+            <p className="ppp">{length}/400</p>
+          </div>
 
           {showEmojis && (
             <Picker

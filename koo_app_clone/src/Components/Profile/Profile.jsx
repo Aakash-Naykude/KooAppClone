@@ -1,13 +1,9 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import { UserContext } from "../../Context/UserContext";
+import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./Profile.css";
 export const Profile = () => {
-  const { handleUsername, username } = useContext(UserContext);
 
-  handleUsername("test");
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">

@@ -1,20 +1,65 @@
 import React, { useContext, useState } from "react";
+import { Navigate } from "react-router-dom";
 import { UserContext } from "../../../Context/UserContext";
 import "./LoginPopup.css";
 export const EmailOtp = ({ settrigger, trigger, email, setEmail }) => {
   const { otp, setOtp } = useContext(UserContext);
   const [userOtp, setUserOtp] = useState("");
-  const handleCheck = () => {
+  function handleCheck() {
     console.log(otp, userOtp);
     if (otp == userOtp) {
-      alert("hii");
-      //fetch
-      //navigate
+      return <Navigate to="/feed" />;
     } else {
-      alert("byyy");
+      alert("enter correct otp");
     }
     setOtp(null);
-  };
+  }
+  const userMail = localStorage.getItem("email");
+  if (otp == userOtp) {
+    console.log(userMail);
+    localStorage.setItem("userid", userMail);
+    fetch(`http://localhost:4000/user/email/${userMail}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        if (res.length > 0) {
+          console.log("No Need");
+          //return <Navigate to="/feed" />;
+        } else {
+          console.log("creating new user");
+          const usernamename = "guest_" + Math.floor(Math.random() * 90) + 10;
+          const payload = {
+            name: usernamename,
+            username: usernamename,
+            email: userMail,
+            mobilenumber: "",
+            profile_pic: "https://www.kooapp.com/img/profilePlaceholder.svg",
+          };
+          fetch("http://localhost:4000/user", {
+            method: "POST",
+            body: JSON.stringify(payload),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+            .then((res) => {
+              return res.json();
+            })
+            .then((res) => {
+              console.log(res);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+          // return <Navigate to="/feed" />;
+        }
+        console.log(res.length);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
   return trigger ? (
     <div>
       <div id="unblurred" className="popup-login">
