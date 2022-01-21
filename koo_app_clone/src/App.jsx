@@ -18,6 +18,7 @@ import { CreateKoo } from "./Components/CreateKoo/CreateKoo";
 import { Notification } from "./Components/Notification/Notification";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import About from "./Components/Widgets/About";
+import Contact from "./Components/Widgets/Contact";
 function App() {
   return (
     <div className="App">
@@ -40,7 +41,8 @@ function App() {
           <Route path="/language" element={<Language />}></Route>
           <Route path="/notification" element={<Notification />}></Route>
           <Route path="/createkoo" element={<CreateKoo />}></Route>
-          <Route path="/about" element={<About/>}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
         </Routes>
       </div>
     </div>

@@ -161,7 +161,7 @@ function Widgets({ trendingResults, followResults }) {
           {/* About  press contact*/}
 
           <div id="questions">
-            <Link to="/about"><span>About</span> </Link>  <span>Press</span> <span>Contact</span> <span>Media</span>{" "}
+            <Link to="/about"><span>About</span> </Link>  <span>Press</span>  <Link to="/contact"><span>Contact</span> </Link>  <span>Media</span>{" "}
             <span>Privacy</span> <span>Terms</span> <span>Guidelines</span>{" "}
             <span>Compliance</span> <span>Sitemap</span> <span>Eminence</span>{" "}
             <span>FAQs</span>

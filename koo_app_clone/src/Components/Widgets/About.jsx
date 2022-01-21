@@ -21,7 +21,7 @@ function About() {
       <div>Let's Koo together!</div>
     </div>
     <div className="all-queries" >
-      <Link to="/about">About</Link>
+      <Link to="/about"> <span> About </span> </Link>  <Link to="/contact"> <span> Contact Us  </span></Link>
     </div>
     <div className="copy">Copyright Koo 2022 ©</div>
   </div >
