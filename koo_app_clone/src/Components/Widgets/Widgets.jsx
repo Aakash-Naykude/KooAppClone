@@ -28,8 +28,7 @@ function Widgets({ trendingResults, followResults }) {
                 <HashTags/>
                 <HashTags/>
                 <HashTags/>
-                <HashTags/>
-                <HashTags/>
+                
               </div>
             </div>
           </div>
