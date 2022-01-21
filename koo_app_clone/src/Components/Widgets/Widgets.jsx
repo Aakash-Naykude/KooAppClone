@@ -42,6 +42,7 @@ function Widgets({ trendingResults, followResults }) {
             <p>Sitemap</p>
             <p>FAQs</p>
           </div>
+          {/* hashtag done */}
         </div>
       </div>
     </div>
