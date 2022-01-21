@@ -25,6 +25,9 @@ export const EmailOtp = ({ settrigger, trigger, email, setEmail }) => {
       .then((res) => {
         if (res.length > 0) {
           console.log("No Need");
+          var hellouser = res[res.length - 1];
+          localStorage.setItem("userid", hellouser._id);
+          localStorage.setItem("email", hellouser.email);
           //return <Navigate to="/feed" />;
         } else {
           console.log("creating new user");
@@ -48,17 +51,22 @@ export const EmailOtp = ({ settrigger, trigger, email, setEmail }) => {
             })
             .then((res) => {
               console.log(res);
+
+              localStorage.setItem("userid", res._id);
+              localStorage.setItem("email", res.email);
             })
             .catch((err) => {
               console.log(err);
             });
-          // return <Navigate to="/feed" />;
+          //return <Navigate to="/feed" />;
         }
-        console.log(res.length);
+        return <Navigate to="/feed" />;
       })
       .catch((err) => {
         console.log(err);
       });
+
+    return <Navigate to="/feed" />;
   }
   return trigger ? (
     <div>
@@ -80,12 +88,7 @@ export const EmailOtp = ({ settrigger, trigger, email, setEmail }) => {
             </div>
             <hr />
             <div className="input-cont-popup">
-              <div className="inpt-cont-inner">
-                {/* <div className="cont-code">
-                          🇮🇳
-                          <span>+91</span>
-                        </div> */}
-              </div>
+              <div className="inpt-cont-inner"></div>
               <input
                 class="phn-inpt"
                 id="phone"

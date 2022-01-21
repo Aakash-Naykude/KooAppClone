@@ -8,10 +8,10 @@ import SidebarOptions from "./SidebarOptions";
 function Sidebar() {
   //const { username, handleUsername } = useContext(UserContext);
   const username = localStorage.getItem("userid");
-  
+
   const handleLogout = () => {
-    localStorage.setItem("userid","")
-    localStorage.getItem("email", "")
+    localStorage.setItem("userid", "");
+    localStorage.setItem("email", "");
   };
   return (
     <div className="hidden sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full">

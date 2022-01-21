@@ -12,7 +12,11 @@ export const Feed = () => {
   const getList = () => {
     fetch("http://localhost:4000/userid/post")
       .then((res) => res.json())
-      .then((json) => setList(json));
+      .then((json) => {
+        setList(json);
+        var abcd = list;
+        console.log(abcd);
+      });
   };
   console.log(list);
 

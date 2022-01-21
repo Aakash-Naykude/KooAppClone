@@ -1,7 +1,6 @@
 import React from "react";
-import "./Viewpost.css";
-function Viewpost({ name, username, title, image, id }) {
-
+import "./UPfeed.css";
+function UPfeed({ head, author, brif, image }) {
   return (
     <div className="maincont">
       <div className="cont1">
@@ -16,12 +15,12 @@ function Viewpost({ name, username, title, image, id }) {
         )}
 
         <div>
-          <h1 className="name">Name</h1>
-          <h2 className="username">Username</h2>
+          <h1 className="name">{head}</h1>
+          <h2 className="username">{author}</h2>
         </div>
       </div>
       <div className="cont2">
-        <h1>{title}</h1>
+        <h1>{brif}</h1>
       </div>
       <div className="cont3">
         {image ? (
@@ -46,14 +45,14 @@ function Viewpost({ name, username, title, image, id }) {
             src="https://www.kooapp.com/img/cardFooterIcons/likeactive_new.svg"
             alt="like"
           />
-          <h1>2</h1>
+          {/* <h1>2</h1> */}
         </div>
         <div>
           <img
             src="https://www.kooapp.com/img/cardFooterIcons/comment_new.svg"
             alt="comment"
           />
-          <h1>2</h1>
+          {/* <h1>2</h1> */}
         </div>
         <div>
           <img
@@ -88,4 +87,4 @@ function Viewpost({ name, username, title, image, id }) {
   );
 }
 
-export default Viewpost;
+export default UPfeed;

@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./Profile.css";
 export const Profile = () => {
-
+  const userMail = localStorage.getItem("email");
+  const userId = localStorage.getItem("userid");
+  const [userList, setUserList] = useState([]);
+  useEffect(() => {
+    getUserData();
+  }, []);
+  const getUserData = () => {
+    fetch(`http://localhost:4000/user/${userId}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        setUserList(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  console.log(userList.name);
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -14,11 +34,14 @@ export const Profile = () => {
         >
           <div className="profilehead1">
             <div>
-              <img
-                src="https://www.kooapp.com/img/ic_back.svg"
-                alt="backtofeed"
-              />
-              <h1>Fake name</h1>
+              <Link to="/feed">
+                <img className="profilehead1img"
+                  src="https://www.kooapp.com/img/ic_back.svg"
+                  alt="backtofeed"
+                />
+              </Link>
+
+              <h1>{userList.name}</h1>
             </div>
             <div>
               <img
@@ -46,15 +69,15 @@ export const Profile = () => {
               />
               <button>Edit Profile</button>
             </div>
-            <h1>name</h1>
-            <h2>usename</h2>
+            <h1>{userList.name}</h1>
+            <h2>{userList.username}</h2>
             <p>Koo Your Opinion</p>
             <div className="profilehead22">
               <img
                 src="https://www.kooapp.com/img/ic_calendar.svg"
                 alt="calender"
               />
-              <h1>Joined on Jan 2022</h1>
+              <h1>Joined on {userList.createdAt}</h1>
             </div>
             <div className="profilehead23">
               <div>2 Followers</div>

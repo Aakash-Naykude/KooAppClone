@@ -1,10 +1,9 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Addinput.css";
 import { Picker } from "emoji-mart";
 import "emoji-mart/css/emoji-mart.css";
 import "./Modal.css";
-import { UserContext } from "../../Context/UserContext";
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 const mic = new SpeechRecognition();
@@ -12,7 +11,6 @@ const mic = new SpeechRecognition();
 mic.continuous = true;
 mic.interimResults = true;
 mic.lang = "en-US";
-
 function AddInput() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -21,19 +19,38 @@ function AddInput() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [showEmojis, setShowEmojis] = useState(false);
 
-  const { username } = useContext(UserContext);
-
+  const userMail = localStorage.getItem("email");
+  const userId = localStorage.getItem("userid");
   const [isListening, setIsListening] = useState(false);
+  const [userList, setUserList] = useState([]);
+  useEffect(() => {
+    getUserData();
+  }, []);
+  const getUserData = () => {
+    fetch(`http://localhost:4000/user/${userId}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        setUserList(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   const sendPost = () => {
     if (loading) return;
     setLoading(true);
 
-    if (username) {
+    console.log(userMail.length);
+    if (userMail.length > 0) {
       console.log(selectedFile);
       const postData = {
         postdata: input,
-        username: "fakeuser",
+        username: userList.name,
         imageupload: selectedFile,
+        userid: userId,
       };
       console.log(postData);
       fetch("http://localhost:4000/userid/post", {
