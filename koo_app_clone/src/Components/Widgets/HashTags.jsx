@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Widgets.css";
 
 const HashTags = () => {
@@ -25,7 +26,9 @@ const HashTags = () => {
                     </div>
                   </div>
                   <div className="hash-add-btn">
+                    <Link to="/addinput">
                     <img src="https://www.kooapp.com/assets/57662a37.svg" alt="" />
+                    </Link>
                   </div>
                 </div>
     </div>
