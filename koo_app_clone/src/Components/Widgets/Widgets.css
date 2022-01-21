@@ -84,3 +84,73 @@
     justify-content:center;
 }
 
+.hash-container{
+    margin-top: 10px;
+}
+.hash-wrap{
+    background: #f8f7f3;
+    border-radius: 12px;
+    padding: 0;
+    border: 1px solid #eee;
+}
+.hash-title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 12px;
+}
+.hash-title{
+    font-size: 18px;
+    margin: 0;
+    font-weight: bolder;
+    color: #000000;
+    font-family: Roboto,sans-serif;
+    /* margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+}
+
+.hash-trendings{
+    border-top: 1px solid #e8e8e3;
+    padding: 10px 12px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.hash-tags-wrap a{
+    text-decoration: none;
+}
+.hash-tags-wrap h5{
+    font-size: 16px;
+    margin: 0;
+    font-weight: bolder;
+    font-family: Roboto,sans-serif;
+    color: rgb(63, 127, 212);
+}
+.hash-followers{
+    display: flex;
+    margin-top: 5px;
+}
+.followers-hash{
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border-radius: 20px;
+}
+.hash-folloers-img{
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border-radius: 20px;
+}
+.hash-add-btn{
+    display: flex;
+}
+.hash-add-btn a{
+    text-decoration: none;
+    color: #424242;
+}
+.hash-add-btn img{
+    vertical-align: middle;
+    width: 65%;
+}
