@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import "firebase/auth";
 import { Link } from "react-router-dom";
@@ -8,8 +7,11 @@ import { EmailLogin } from "./EmailPopup/EmailLogin";
 import { EmailOtp } from "./EmailPopup/EmailOtp";
 import { PhoneOtp } from "./PhonePopup/PhoneOtp";
 const LandingPage = () => {
-const [popup, setPopup] = useState(false);
+  const [popup, setPopup] = useState(false);
 
+  const [phone, setPhone] = useState(true);
+  const [email, setEmail] = useState(true);
+  const [otppopup, setOtppopup] = useState(true);
   return (
     <div>
       <div className="navContainer">
@@ -52,11 +54,48 @@ const [popup, setPopup] = useState(false);
             <img
               src="https://img.icons8.com/small/96/000000/user-male-circle.png"
               alt="profile"
-              onClick={()=>{setPopup(true)}}
+              onClick={() => {
+                setPopup(true);
+              }}
             />
           </div>
         </div>
-        <EmailOtp trigger={popup} settrigger={setPopup} ></EmailOtp>
+
+        {otppopup ? (
+          phone ? (
+            <PhoneLogin
+              trigger={popup}
+              setPhone={setPhone}
+              phone={phone}
+              settrigger={setPopup}
+              otppopup={otppopup}
+              setOtppopup={setOtppopup}
+            ></PhoneLogin>
+          ) : (
+            <PhoneOtp
+              trigger={popup}
+              setPhone={setPhone}
+              phone={phone}
+              settrigger={setPopup}
+            ></PhoneOtp>
+          )
+        ) : email ? (
+          <EmailLogin
+            trigger={popup}
+            setEmail={setEmail}
+            email={email}
+            settrigger={setPopup}
+            otppopup={otppopup}
+            setOtppopup={setOtppopup}
+          ></EmailLogin>
+        ) : (
+          <EmailOtp
+            trigger={popup}
+            setEmail={setEmail}
+            email={email}
+            settrigger={setPopup}
+          ></EmailOtp>
+        )}
       </div>
 
       <div className="pg-container">
