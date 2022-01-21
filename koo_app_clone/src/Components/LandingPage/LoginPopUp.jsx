@@ -1,6 +1,7 @@
 import React from "react";
 import "./LoginPopup.css";
 
+
 const LoginPopUp = (props) => {
   return props.trigger ? (
     <div id="unblurred" className="popup-login">
