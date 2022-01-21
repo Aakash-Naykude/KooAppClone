@@ -17,7 +17,7 @@ function Contact() {
         <div className="about-us" >Contact Us</div>
         <div className="query" >
             <div className="heading">Have a General Enquiry?</div>
-            <div>Reach Us on : vani630145@gmail.com</div>
+            <div>Reach Us on :   <a href="mailto:vani630145@gmail.com">  vani630145@gmail.com  </a> </div>
             <div className="hr"></div>
             <div className="hr"></div>
 
