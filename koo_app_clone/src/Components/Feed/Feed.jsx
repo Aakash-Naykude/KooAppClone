@@ -19,6 +19,28 @@ export const Feed = () => {
       .then((json) => setList(json));
   };
   console.log(list);
+
+  var mybutton = document.getElementById("backtotopbtn");
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 900 ||
+      document.documentElement.scrollTop > 900
+    ) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -121,6 +143,13 @@ export const Feed = () => {
             </Link>
           </div>
 
+          <button
+            onClick={topFunction}
+            id="backtotopbtn"
+            className="backtotop  sticky top-20 "
+          >
+            Back To Top
+          </button>
           <Link to="/addinput">
             <div className="inputbar">
               <div style={{ display: "flex" }}>
@@ -140,11 +169,6 @@ export const Feed = () => {
               </div>
             </div>
           </Link>
-
-
-
-
-
 
           <div className="pb-72">
             {list.map((e) => (
