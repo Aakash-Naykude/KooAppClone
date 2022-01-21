@@ -1,6 +1,6 @@
 .full-div{ 
     width:100%;
-    float:right;
+  padding-right: 30px;
 }
 
 #questions{
@@ -16,76 +16,9 @@
       
 }
 
-
-
-.trending-hastags{
-    border:1px solid rgb(238, 227, 227);
-    width:90%;
-    padding:10px; 
-    margin-top: 30px;
-    text-align:left;
-    font-weight: 500;
-    font-size: 20px;
-    border-radius:10px;
-    background-color: #f5f5f5;
-
-}
-
-.add{
-    
-    position: relative;
-    left:170px;
-    bottom:10px;
-    width:50px !important;
-    height:30px;
-}
-.profiles{
-
-    display:grid;
-    grid-template-columns:8% 8% 8% 8% 8% 8%;
-    
-}
-
-.profiles > img{
-    height:30px;
-    margin-bottom: 0px;
-}
-
-.hastag-1{ 
-    border-top-width:1px;
-
-    margin-top: 10px;
-    color:blue;
-    cursor: pointer;
-    
-}
-
-.mike-icon{ position: absolute;
-    top: 15px;
-    right: 108px;
-    width: 20px;
-    height:20px;
-}
-
-.search{ 
-    border:1px solid rgb(238, 227, 227);
-    width:90%;
-    padding:10px;
-    height:50px;
-    font-size: 20px;
-    outline: 0;
-    background-color: #f5f5f5;
-    border-radius:10px;
-    display:flex;
-}
-.search-flex{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
 .hash-container{
     margin-top: 10px;
+    padding: 15px;
 }
 .hash-wrap{
     background: #f8f7f3;
@@ -102,7 +35,7 @@
 .hash-title{
     font-size: 18px;
     margin: 0;
-    font-weight: bolder;
+    font-weight: 1000;
     color: #000000;
     font-family: Roboto,sans-serif;
     /* margin-block-start: 1.67em;
@@ -153,4 +86,38 @@
 .hash-add-btn img{
     vertical-align: middle;
     width: 65%;
+}
+.hash-srch-container{
+    margin-bottom: 10px;
+    padding: 15px;
+}
+.hash-srch-wrap{
+    background: #f8f7f3;
+    padding: 10px 15px;
+    border-radius: 12px;
+    display: flex;
+    border: 1px solid #e8e8e3;
+}
+.hash-srch-wrap input{
+        background: transparent;
+        border: none;
+        width: 100%;
+        padding: 7px;
+        border-radius: 12px;
+}
+.blank-srch{
+
+}
+.hash-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 14px;
+}
+.hash-bottom p{
+    color: #888;
+    padding: 2px 4px;
+    margin: 2px;
+    text-decoration: none;
 }

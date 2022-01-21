@@ -10,14 +10,17 @@ function Widgets({ trendingResults, followResults }) {
         <div className="full-div">
           {/* search box */}
           <div className="hash-srch-container">
-            
+                <div className="hash-srch-wrap">
+                  <input  type="text"  placeholder="Search"/>
+                  <div className="blank-srch"></div>
+                </div>
           </div>
 
           {/* trending hastags */}
           <div className="hash-container">
             <div className="hash-wrap">
               <div className="hash-title-container">
-                <h5 className="hash-title">Trending Hashtags</h5>
+                <h5 className="hash-title"> <b> <b>Trending Hashtags </b> </b> </h5>
               </div>
 
               <div className="hash-containt-container">
@@ -29,17 +32,13 @@ function Widgets({ trendingResults, followResults }) {
           </div>
           {/* About  press contact*/}
 
-          <div id="questions">
-            <Link to="/about">
-              <span>About</span>{" "}
-            </Link>{" "}
-            <span>Press</span>{" "}
-            <Link to="/contact">
-              <span>Contact</span>{" "}
-            </Link>{" "}
-            <span>Media</span> <span>Privacy</span> <span>Terms</span>{" "}
-            <span>Guidelines</span> <span>Compliance</span> <span>Sitemap</span>{" "}
-            <span>Eminence</span> <span>FAQs</span>
+          <div className="hash-bottom">
+            <p>About</p>
+            <p>Press</p>
+            <p>Contact</p>
+            <p>Resource Center</p>
+            <p>Sitemap</p>
+            <p>FAQs</p>
           </div>
         </div>
       </div>
