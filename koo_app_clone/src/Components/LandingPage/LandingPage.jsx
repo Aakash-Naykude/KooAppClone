@@ -3,11 +3,13 @@ import React, { useEffect, useState } from "react";
 import "firebase/auth";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
-import LoginPopUp from "./LoginPopUp";
-
-
+import { PhoneLogin } from "./PhonePopup/PhoneLogin";
+import { EmailLogin } from "./EmailPopup/EmailLogin";
+import { EmailOtp } from "./EmailPopup/EmailOtp";
+import { PhoneOtp } from "./PhonePopup/PhoneOtp";
 const LandingPage = () => {
-const [popup, setPopup] = useState(false)
+const [popup, setPopup] = useState(false);
+
   return (
     <div>
       <div className="navContainer">
@@ -54,7 +56,7 @@ const [popup, setPopup] = useState(false)
             />
           </div>
         </div>
-        <LoginPopUp trigger={popup} settrigger={setPopup} ></LoginPopUp>
+        <EmailOtp trigger={popup} settrigger={setPopup} ></EmailOtp>
       </div>
 
       <div className="pg-container">
