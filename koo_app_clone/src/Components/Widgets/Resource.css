@@ -1,0 +1,47 @@
+.koo-icon{
+    height:80px;
+    margin:3% !important;
+}
+
+.Head{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin:2%;
+    font-weight: 700;
+    font-size: 19px;
+    cursor: pointer;
+}
+.Head>p:hover{
+    color:#FDD835;
+}
+.who{
+    color:#FDD835;
+}
+
+.background{
+    text-align: center;
+    background-image:linear-gradient(rgba(0,0,0,0), rgba(255, 255, 100, 0.5)),url("https://www.kooapp.com/img/landingbackground.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-color: black;
+    
+}
+      
+
+.heading{
+    font-size:60px;
+
+}
+
+.text{
+    margin:2% 27% 2% 27%;
+    font-size:20px;
+}
+.text>div{
+    margin:6% 0 6% 0 ;
+}
+
+

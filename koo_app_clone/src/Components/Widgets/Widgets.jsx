@@ -34,12 +34,19 @@ function Widgets({ trendingResults, followResults }) {
                 <HashTags />
                 <HashTags />
                 <HashTags />
+
               </div>
             </div>
           </div>
           {/* About  press contact*/}
 
           <div className="hash-bottom">
+            <Link to="/about"><p>About</p></Link>
+
+            <p>Press</p>
+            <Link to="/contact"><p>Contact</p></Link>
+            <Link to="/resource"><p>Resource Center</p></Link>
+
             <Link to="/about">
               <p>About</p>
             </Link>
