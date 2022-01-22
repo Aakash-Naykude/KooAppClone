@@ -19,20 +19,34 @@
     color:#FDD835;
 }
 
+
+.end{
+    margin:15% 32% 4% 35%;
+    font-size:12px; 
+}
+.explore{
+    width:200px;
+    height:60px;
+    border-radius:10px;
+    background-color:yellow;
+    color:white;
+    font-weight:700;
+}
 .background{
     text-align: center;
-    background-image:linear-gradient(rgba(0,0,0,0), rgba(255, 255, 100, 0.5)),url("https://www.kooapp.com/img/landingbackground.png");
+    background-image:linear-gradient(rgba(7, 7, 7, 0.5), rgba(12, 11, 11, 0.733)),url("https://www.kooapp.com/img/landingbackground.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     background-color: black;
-    
+    color:white;
 }
       
 
 .heading{
     font-size:60px;
+    color:white;
 
 }
 

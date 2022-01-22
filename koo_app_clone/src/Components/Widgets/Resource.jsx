@@ -27,9 +27,14 @@ function Resource() {
                 <div>Koo is a micro-blog in Indian languages. We are here to help Indians express themselves in the easiest way possible with the objective of democratizing their voice. Share your thoughts in text, audio or video.</div>
                 <div>Some of the most prominent faces of India use Koo. You will also find millions of others from all walks of life. Koo is home to the Voices of India. Follow people you like, know what's on their mind and share your thoughts with India too.</div>
                 <div>Let's Koo together!</div>
-                <button>Explore Koo</button>
+                <Link to="/feed" >  <button className="explore" >Explore Koo</button></Link>
             </div>
+
         </div>
+        <div className="end" >'Koo' and are the exclusive trademarks of Bombinate Technologies Private Limited.
+            © Copyright 2022 Bombinate Technologies Private Limited. All rights reserved.</div>
+
+
     </div>
 
 
