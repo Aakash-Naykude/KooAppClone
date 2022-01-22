@@ -35,7 +35,8 @@ export const Profile = () => {
           <div className="profilehead1">
             <div>
               <Link to="/feed">
-                <img className="profilehead1img"
+                <img
+                  className="profilehead1img"
                   src="https://www.kooapp.com/img/ic_back.svg"
                   alt="backtofeed"
                 />
@@ -80,8 +81,8 @@ export const Profile = () => {
               <h1>Joined on {userList.createdAt}</h1>
             </div>
             <div className="profilehead23">
-              <div>2 Followers</div>
-              <div>49 Following</div>
+              <div>{userList.followers} Followers</div>
+              <div>{userList.following} Following</div>
             </div>
           </div>
           <div className="profilehead3">

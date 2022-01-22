@@ -10,34 +10,45 @@ function Widgets({ trendingResults, followResults }) {
         <div className="full-div">
           {/* search box */}
           <div className="hash-srch-container">
-                <div className="hash-srch-wrap">
-                  <input  type="text"  placeholder="Search"/>
-                  <div className="blank-srch"></div>
-                </div>
+            <div className="hash-srch-wrap">
+              <input type="text" placeholder="Search" />
+              <div className="blank-srch"></div>
+            </div>
           </div>
 
           {/* trending hastags */}
           <div className="hash-container">
             <div className="hash-wrap">
               <div className="hash-title-container">
-                <h5 className="hash-title"> <b> <b>Trending Hashtags </b> </b> </h5>
+                <h5 className="hash-title">
+                  {" "}
+                  <b>
+                    {" "}
+                    <b>Trending Hashtags </b>{" "}
+                  </b>{" "}
+                </h5>
               </div>
 
               <div className="hash-containt-container">
-                <HashTags/>
-                <HashTags/>
-                <HashTags/>
-                <HashTags/>
-                
+                <HashTags />
+                <HashTags />
+                <HashTags />
+                <HashTags />
               </div>
             </div>
           </div>
           {/* About  press contact*/}
 
           <div className="hash-bottom">
-            <p>About</p>
-            <p>Press</p>
-            <p>Contact</p>
+            <Link to="/about">
+              <p>About</p>
+            </Link>
+            <Link to="/about">
+              <p>Press</p>
+            </Link>
+            <Link to="/contact">
+              <p>Contact</p>
+            </Link>
             <p>Resource Center</p>
             <p>Sitemap</p>
             <p>FAQs</p>

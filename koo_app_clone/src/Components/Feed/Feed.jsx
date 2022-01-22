@@ -14,8 +14,6 @@ export const Feed = () => {
       .then((res) => res.json())
       .then((json) => {
         setList(json);
-        var abcd = list;
-        console.log(abcd);
       });
   };
   console.log(list);
@@ -172,7 +170,19 @@ export const Feed = () => {
 
           <div className="pb-72">
             {list.map((e) => (
-              <Viewpost key={e._id} title={e.postdata} image={e.imageupload} />
+              <Viewpost
+                key={e._id}
+                profile_pic={e.profile_pic}
+                name={e.name}
+                username={e.username}
+                userid={e.userid}
+                postid={e._id}
+                title={e.postdata}
+                image={e.imageupload}
+                likes={e.likes}
+                commentNo={e.commentNo}
+                comments={e.comments}
+              />
             ))}
           </div>
         </div>
