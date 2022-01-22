@@ -14,8 +14,6 @@ export const Feed = () => {
       .then((res) => res.json())
       .then((json) => {
         setList(json);
-        var abcd = list;
-        console.log(abcd);
       });
   };
   console.log(list);
@@ -41,6 +39,31 @@ export const Feed = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
+  const handleAddLike = (likes, postid) => {
+    console.log(likes, postid);
+    const postData = {
+      likes: likes + 1,
+    };
+    console.log(postData);
+    fetch(`http://localhost:4000/userid/post/${postid}`, {
+      method: "PATCH",
+      body: JSON.stringify(postData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        getList();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -172,7 +195,20 @@ export const Feed = () => {
 
           <div className="pb-72">
             {list.map((e) => (
-              <Viewpost key={e._id} title={e.postdata} image={e.imageupload} />
+              <Viewpost
+                key={e._id}
+                profile_pic={e.profile_pic}
+                name={e.name}
+                username={e.username}
+                userid={e.userid}
+                postid={e._id}
+                title={e.postdata}
+                image={e.imageupload}
+                likes={e.likes}
+                commentNo={e.commentNo}
+                comments={e.comments}
+                handleAddLike={handleAddLike}
+              />
             ))}
           </div>
         </div>

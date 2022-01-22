@@ -50,6 +50,9 @@ function AddInput() {
         postdata: input,
         username: userList.name,
         imageupload: selectedFile,
+        likes: 0,
+        commentNo: 0,
+        comments: "",
         userid: userId,
       };
       console.log(postData);

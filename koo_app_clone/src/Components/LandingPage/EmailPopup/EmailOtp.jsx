@@ -38,6 +38,8 @@ export const EmailOtp = ({ settrigger, trigger, email, setEmail }) => {
             email: userMail,
             mobilenumber: "",
             profile_pic: "https://www.kooapp.com/img/profilePlaceholder.svg",
+            followers: 0,
+            following: 0,
           };
           fetch("http://localhost:4000/user", {
             method: "POST",

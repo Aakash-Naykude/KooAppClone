@@ -12,13 +12,11 @@ export const Polls = () => {
   }, []);
 
   const getNews = () => {
-    fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=5c05f7a8994a463d94928b1b234d77aa`
-    )
+    fetch(`https://kooappcloneapis.herokuapp.com/polls`)
       .then((d) => d.json())
       .then((res) => {
-        setNews(res.articles);
-        console.log(res.articles);
+        setNews(res);
+        console.log(res);
       });
   };
   var mybutton = document.getElementById("backtotopbtn");
