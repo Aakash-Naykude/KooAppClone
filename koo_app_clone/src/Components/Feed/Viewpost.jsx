@@ -16,8 +16,10 @@ function Viewpost({
   handleAddLike,
 }) {
   const { addCommentToPost } = useContext(UserContext);
-  const handleComment = (idofpost) => {
-    addCommentToPost(idofpost);
+  const handleComment = (postid) => {
+    //addCommentToPost(idofpost);
+    console.log("hiii");
+    localStorage.setItem("postid", postid);
   };
   return (
     <div className="maincont">

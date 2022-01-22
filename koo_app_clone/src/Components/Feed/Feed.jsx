@@ -10,7 +10,7 @@ export const Feed = () => {
     getList();
   }, []);
   const getList = () => {
-    fetch("http://localhost:4000/userid/post")
+    fetch("https://kooappcloneapis.herokuapp.com/userid/post")
       .then((res) => res.json())
       .then((json) => {
         setList(json);
@@ -49,7 +49,7 @@ export const Feed = () => {
         likes: likes + 1,
       };
       console.log(postData);
-      fetch(`http://localhost:4000/userid/post/${postid}`, {
+      fetch(`https://kooappcloneapis.herokuapp.com/userid/post/${postid}`, {
         method: "PATCH",
         body: JSON.stringify(postData),
         headers: {
