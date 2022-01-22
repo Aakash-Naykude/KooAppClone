@@ -27,7 +27,7 @@ export const PhoneLogin = ({
                 />
               </button>
             </div>
-            <hr />
+            {/* <hr /> */}
             <div className="input-cont-popup">
               <div className="inpt-cont-inner">
                 <div className="cont-code">
