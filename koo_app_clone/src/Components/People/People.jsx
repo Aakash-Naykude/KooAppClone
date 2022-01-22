@@ -7,15 +7,65 @@ export const People = () => {
   const [list, setList] = useState([]);
   useEffect(() => {
     getPeople();
+    getUserData();
   }, []);
   const getPeople = () => {
-    fetch("http://localhost:4000/people")
+    fetch("https://kooappcloneapis.herokuapp.com/people")
       .then((p) => p.json())
       .then((res) => {
         setList(res);
         console.log(res);
       });
   };
+
+  const userId = localStorage.getItem("userid");
+  const [following, setFollowing] = useState("");
+  const [followingPeople, setFollowingPeople] = useState([]);
+  const getUserData = () => {
+    fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        setFollowing(res.following);
+        setFollowingPeople(res.followingPeople);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  console.log(following);
+
+  const userMail = localStorage.getItem("email");
+  const handleAddFollowing = (eid, ename) => {
+    if (userMail.length > 0) {
+      const payload = {
+        following: following + 1,
+        followingPeople: [...followingPeople, eid],
+      };
+      fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`, {
+        method: "PATCH",
+        body: JSON.stringify(payload),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((res) => {
+          console.log(res);
+          alert(`You are Following ${ename} 🥳`);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      alert("Please Sign in first to like, post, share.");
+    }
+  };
+
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -138,7 +188,12 @@ export const People = () => {
                     </div>
                   </div>
                   <div>
-                    <button className="followbtn"> + Follow</button>
+                    <button
+                      onClick={() => handleAddFollowing(e._id, e.name)}
+                      className="followbtn"
+                    >
+                      + Follow
+                    </button>
                   </div>
                 </div>
                 <hr />

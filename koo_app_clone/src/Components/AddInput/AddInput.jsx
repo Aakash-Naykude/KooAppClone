@@ -68,6 +68,7 @@ function AddInput() {
         })
         .then((res) => {
           console.log(res);
+          alert("Koo Posted successfully");
         })
         .catch((err) => {
           console.log(err);
