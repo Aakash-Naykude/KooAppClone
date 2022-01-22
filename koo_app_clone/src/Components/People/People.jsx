@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./People.css";
 export const People = () => {
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    getPeople();
+  }, []);
+  const getPeople = () => {
+    fetch("http://localhost:4000/people")
+      .then((p) => p.json())
+      .then((res) => {
+        setList(res);
+        console.log(res);
+      });
+  };
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -106,31 +118,32 @@ export const People = () => {
             </Link>
           </div>
 
-          <Link to="/addinput">
-            <div className="inputbar">
-              <div style={{ display: "flex" }}>
-                <img
-                  className="iconimage"
-                  src="https://www.kooapp.com/img/profilePlaceholderYellow.svg"
-                  alt="iconimage"
-                />
-                <p>What's on your mind...</p>
+          <h1 className="peoplecan">People you can follow</h1>
+          <div id="peoplecont" className="pb-20">
+            {list.map((e) => (
+              <div key={e._id}>
+                <div className="showpeople">
+                  <div className="profilepicandname">
+                    <img src={e.profilepic} alt="profilepic" />
+                    <div>
+                      <div>
+                        <h1>{e.name}</h1>
+                        <img
+                          src="https://kooapp-media-input.s3.ap-south-1.amazonaws.com/koo_verfication.png"
+                          alt="profilepic"
+                        />
+                      </div>
+
+                      <h2>{e.username}</h2>
+                    </div>
+                  </div>
+                  <div>
+                    <button className="followbtn"> + Follow</button>
+                  </div>
+                </div>
+                <hr />
               </div>
-              <div>
-                <img
-                  className="addiconlogo"
-                  src="https://www.kooapp.com/img/koo_create_24.svg"
-                  alt="addlogo"
-                />
-              </div>
-            </div>
-          </Link>
-          <h1>People</h1>
-          {/* <Input /> */}
-          <div className="pb-72">
-            {/* {posts.map((post) => (
-        <Post key={post.id} id={post.id} post={post.data()} />
-      ))} */}
+            ))}
           </div>
         </div>
         <Widgets />
