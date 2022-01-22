@@ -22,6 +22,7 @@ import About from "./Components/Widgets/About";
 import Contact from "./Components/Widgets/Contact";
 import Resource from "./Components/Widgets/Resource";
 import Comment from "./Components/Feed/Comment";
+import Faq from "./Components/Widgets/Faq";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/resource" element={<Resource />}></Route>
+          <Route path="/faq" element={<Faq />}></Route>
         </Routes>
       </div>
     </div>
