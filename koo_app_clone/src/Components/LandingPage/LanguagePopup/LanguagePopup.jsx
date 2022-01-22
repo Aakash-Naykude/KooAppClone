@@ -56,7 +56,7 @@ export const LanguagePopup = ({ setLang, lang }) => {
                   <div className="lang-available">Available Languages</div>
                   <hr />
                   <div className="lang-button-wrap">
-                    <button className="lang-btns">
+                    <button className="lang-btns" style={{color:"#0069f6", backgroundColor:"#e0ecfd"}}>
                       <div className="lang-btn-inner">
                         <span className="lang-btn-sp">
                           <span className="lang-t">English</span>
