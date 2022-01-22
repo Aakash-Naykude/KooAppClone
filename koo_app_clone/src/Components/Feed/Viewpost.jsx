@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { UserContext } from "../../Context/UserContext";
 import "./Viewpost.css";
 function Viewpost({
   profile_pic,
@@ -13,7 +15,10 @@ function Viewpost({
   comments,
   handleAddLike,
 }) {
-
+  const { addCommentToPost } = useContext(UserContext);
+  const handleComment = (idofpost) => {
+    addCommentToPost(idofpost);
+  };
   return (
     <div className="maincont">
       <div className="cont1">
@@ -94,13 +99,15 @@ function Viewpost({
           />
         </div>
       </div>
-      <div className="cont5">
-        <img
-          src="https://www.kooapp.com/img/profilePlaceholderYellow.svg"
-          alt="comment"
-        />
-        <h1>Write Your Comment...</h1>
-      </div>
+      <Link to="/comments">
+        <div className="cont5" onclick={() => handleComment(postid)}>
+          <img
+            src="https://www.kooapp.com/img/profilePlaceholderYellow.svg"
+            alt="comment"
+          />
+          <h1>Write Your Comment...</h1>
+        </div>
+      </Link>
     </div>
   );
 }

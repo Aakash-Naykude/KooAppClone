@@ -40,29 +40,35 @@ export const Feed = () => {
     document.documentElement.scrollTop = 0;
   }
 
+  const userMail = localStorage.getItem("email");
+  const userId = localStorage.getItem("userid");
   const handleAddLike = (likes, postid) => {
-    console.log(likes, postid);
-    const postData = {
-      likes: likes + 1,
-    };
-    console.log(postData);
-    fetch(`http://localhost:4000/userid/post/${postid}`, {
-      method: "PATCH",
-      body: JSON.stringify(postData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => {
-        return res.json();
+    if (userMail.length > 0) {
+      console.log(likes, postid);
+      const postData = {
+        likes: likes + 1,
+      };
+      console.log(postData);
+      fetch(`http://localhost:4000/userid/post/${postid}`, {
+        method: "PATCH",
+        body: JSON.stringify(postData),
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .then((res) => {
-        console.log(res);
-        getList();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+        .then((res) => {
+          return res.json();
+        })
+        .then((res) => {
+          console.log(res);
+          getList();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      alert("Please Sign in first to like, post, share.")
+    }
   };
   return (
     <div className="maincon">

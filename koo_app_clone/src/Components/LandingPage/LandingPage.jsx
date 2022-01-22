@@ -6,9 +6,12 @@ import { PhoneLogin } from "./PhonePopup/PhoneLogin";
 import { EmailLogin } from "./EmailPopup/EmailLogin";
 import { EmailOtp } from "./EmailPopup/EmailOtp";
 import { PhoneOtp } from "./PhonePopup/PhoneOtp";
+import {LanguagePopup} from './LanguagePopup/LanguagePopup';
+
+
 const LandingPage = () => {
   const [popup, setPopup] = useState(false);
-
+  const [lang, setLang] = useState(false)
   const [phone, setPhone] = useState(true);
   const [email, setEmail] = useState(true);
   const [otppopup, setOtppopup] = useState(true);
@@ -46,6 +49,9 @@ const LandingPage = () => {
             <img
               src="https://www.kooapp.com/assets/d6c4a8f9.svg"
               alt="language"
+              onClick={() => {
+                setLang(true);
+              }}
             />
             <img
               src="https://www.kooapp.com/assets/15ce681a.svg"
@@ -60,7 +66,10 @@ const LandingPage = () => {
             />
           </div>
         </div>
-
+        {/* {lang ? (  */}
+          <LanguagePopup setLang={setLang} lang={lang} ></LanguagePopup>
+      {/* //   ) : ("")
+      // } */}
         {otppopup ? (
           phone ? (
             <PhoneLogin
