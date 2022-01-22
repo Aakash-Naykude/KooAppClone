@@ -9,6 +9,11 @@
     top: 0px;
 } 
 
+.mail{
+    color:#90A4AE;
+
+}
+
 .all-queries{
    
     color:white;
@@ -36,7 +41,7 @@
 
 .query{
     
-    margin-top: 20px;
+    margin-top: 50px;
     text-align: center;
     
 }

@@ -20,6 +20,7 @@ import { Notification } from "./Components/Notification/Notification";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import About from "./Components/Widgets/About";
 import Contact from "./Components/Widgets/Contact";
+import Resource from "./Components/Widgets/Resource";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Route path="/createkoo" element={<CreateKoo />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/resource" element={<Resource />}></Route>
         </Routes>
       </div>
     </div>
