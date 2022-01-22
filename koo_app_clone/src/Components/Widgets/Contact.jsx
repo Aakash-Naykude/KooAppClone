@@ -16,14 +16,20 @@ function Contact() {
         </div>
         <div className="about-us" >Contact Us</div>
         <div className="query" >
-            <div className="heading">Have a General Enquiry?</div>
+            <div className="heading1">Have a General Enquiry?</div>
             <div  >Reach Us on :   <a href="mailto:aakashnaykude123@gmail.com" className="mail">  aakashnaykude123@gmail.com  </a> </div>
             <div className="hr"></div>
-            <div className="heading">Want to work with us?</div>
+            <div className="heading1">Want to work with us?</div>
             <div  >Reach Us on :   <a href="mailto:vani630145@gmail.com" className="mail"> vani630145@gmail.com </a> </div>
             <div className="hr"></div>
-            <div className="heading">Any Complaints?</div>
+            <div className="heading1">Any Complaints?</div>
             <div>Reach Us on :  <a href="mailto:arnavi.gode96@gmail.com" className="mail" >arnavi.gode96@gmail.com</a></div>
+            <div className="hr"></div>
+            <div className="heading1">Any Technical Complaints?</div>
+            <div>Reach Us on :  <a href="mailto:emailgeorgeabraham@gmail.com" className="mail" >emailgeorgeabraham@gmail.com</a></div>
+            <div className="hr"></div>
+            <div className="heading1">Have a Security Queries?</div>
+            <div>Reach Us on :  <a href="mailto:ecmayankprajapati111@gmail.com" className="mail" >ecmayankprajapati111@gmail.com</a></div>
 
 
         </div>

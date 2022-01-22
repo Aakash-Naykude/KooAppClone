@@ -47,16 +47,6 @@ function Widgets({ trendingResults, followResults }) {
             <Link to="/contact"><p>Contact</p></Link>
             <Link to="/resource"><p>Resource Center</p></Link>
 
-            <Link to="/about">
-              <p>About</p>
-            </Link>
-            <Link to="/about">
-              <p>Press</p>
-            </Link>
-            <Link to="/contact">
-              <p>Contact</p>
-            </Link>
-            <p>Resource Center</p>
             <p>Sitemap</p>
             <p>FAQs</p>
           </div>
