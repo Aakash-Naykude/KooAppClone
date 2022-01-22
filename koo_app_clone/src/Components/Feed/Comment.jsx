@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Comment.css";
 import { Picker } from "emoji-mart";
 import "emoji-mart/css/emoji-mart.css";
 import "./Modal.css";
+import { UserContext } from "../../Context/UserContext";
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 const mic = new SpeechRecognition();
@@ -23,11 +24,15 @@ function Comment() {
   const userId = localStorage.getItem("userid");
   const [isListening, setIsListening] = useState(false);
   const [userList, setUserList] = useState([]);
+
+  const { comment } = useContext(UserContext);
   useEffect(() => {
     getUserData();
   }, []);
+
   const getUserData = () => {
-    fetch(`http://localhost:4000/user/${userId}`)
+    console.log(localStorage.getItem("postid"));
+    fetch(`https://kooappcloneapis.herokuapp.com/userid/post/`)
       .then((res) => {
         return res.json();
       })
@@ -56,7 +61,7 @@ function Comment() {
         userid: userId,
       };
       console.log(postData);
-      fetch("http://localhost:4000/userid/post", {
+      fetch("https://kooappcloneapis.herokuapp.com/userid/post", {
         method: "POST",
         body: JSON.stringify(postData),
         headers: {
@@ -192,10 +197,14 @@ function Comment() {
         <div id="addPostToComment">
           <div className="addPostToCommentcont1">
             {image ? (
-              <img className="profilepic" src={image} alt="postimg" />
+              <img
+                className="addPostToCommentprofilepic"
+                src={image}
+                alt="postimg"
+              />
             ) : (
               <img
-                className="profilepic"
+                className="addPostToCommentprofilepic"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzyALOcLp4ykOIC4bim8L0xZIvgfLLZEo-mg&usqp=CAU"
                 alt="postimg"
               />
@@ -220,11 +229,11 @@ function Comment() {
               //     alt="postimg"
               //   />
             )} */}
-            
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1MvKGlOE7ERr4LBkTnMLIJgHZE_1zewZHvw&usqp=CAU"
-          alt="postedimg"
-        />
+
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1MvKGlOE7ERr4LBkTnMLIJgHZE_1zewZHvw&usqp=CAU"
+              alt="postedimg"
+            />
           </div>
         </div>
 

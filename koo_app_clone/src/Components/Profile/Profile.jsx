@@ -11,7 +11,7 @@ export const Profile = () => {
     getUserData();
   }, []);
   const getUserData = () => {
-    fetch(`http://localhost:4000/user/${userId}`)
+    fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`)
       .then((res) => {
         return res.json();
       })
@@ -68,7 +68,10 @@ export const Profile = () => {
                 src="https://www.kooapp.com/img/profilePlaceholder.svg"
                 alt="profile"
               />
-              <button>Edit Profile</button>
+
+              <button>
+                <Link to="/editprofile">Edit Profile </Link>
+              </button>
             </div>
             <h1>{userList.name}</h1>
             <h2>{userList.username}</h2>

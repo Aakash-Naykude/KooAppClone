@@ -23,6 +23,7 @@ import Contact from "./Components/Widgets/Contact";
 import Resource from "./Components/Widgets/Resource";
 import Comment from "./Components/Feed/Comment";
 import Faq from "./Components/Widgets/Faq";
+import Editprofile from "./Components/Editprofile/Editprofile";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/resource" element={<Resource />}></Route>
           <Route path="/faq" element={<Faq />}></Route>
+          <Route path="/editprofile" element={<Editprofile />}></Route>
         </Routes>
       </div>
     </div>

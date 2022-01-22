@@ -27,7 +27,7 @@ function AddInput() {
     getUserData();
   }, []);
   const getUserData = () => {
-    fetch(`http://localhost:4000/user/${userId}`)
+    fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`)
       .then((res) => {
         return res.json();
       })
@@ -56,7 +56,7 @@ function AddInput() {
         userid: userId,
       };
       console.log(postData);
-      fetch("http://localhost:4000/userid/post", {
+      fetch("https://kooappcloneapis.herokuapp.com/userid/post", {
         method: "POST",
         body: JSON.stringify(postData),
         headers: {

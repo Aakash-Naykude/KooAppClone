@@ -1,5 +1,6 @@
 var useremail = localStorage.getItem("email");
 var useid = localStorage.getItem("userid");
+var postid = localStorage.getItem("postid");
 // Developers det
 //Apikey -------     1h4XwiOgJe2CsRF7bCUZ7Pa24
 //API Key Secret ---- ZhIZPNy6oxyQS0Bx9xbMRnXyjKUNlOdwPk3X9CpbSSuM4aWsoh

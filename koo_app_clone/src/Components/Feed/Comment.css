@@ -109,6 +109,7 @@
   width: 94%;
   margin-left: 3%;
   border-radius: 12px;
+  margin-top: 10px;
 }
 #addPostToComment > .addPostToCommentcont1 {
   display: flex;
@@ -150,4 +151,7 @@
   background-color: white;
   color: white;
   padding: 2px;
+}
+.addPostToCommentprofilepic {
+  margin: 8px 0 0 8px;
 }
