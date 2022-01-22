@@ -21,6 +21,7 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 import About from "./Components/Widgets/About";
 import Contact from "./Components/Widgets/Contact";
 import Resource from "./Components/Widgets/Resource";
+import Comment from "./Components/Feed/Comment";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/language" element={<Language />}></Route>
           <Route path="/notification" element={<Notification />}></Route>
           <Route path="/createkoo" element={<CreateKoo />}></Route>
+          <Route path="/comments" element={<Comment />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/resource" element={<Resource />}></Route>
