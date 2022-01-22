@@ -12,9 +12,7 @@ export const Following = () => {
   }, []);
 
   const getNews = () => {
-    fetch(
-      `http://localhost:4000/following`
-    )
+    fetch(`https://kooappcloneapis.herokuapp.com/following`)
       .then((d) => d.json())
       .then((res) => {
         setNews(res);

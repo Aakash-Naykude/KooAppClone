@@ -12,7 +12,7 @@ export const Trending = () => {
   }, []);
 
   const getNews = () => {
-    fetch(`http://localhost:4000/trending`)
+    fetch(`https://kooappcloneapis.herokuapp.com/trending`)
       .then((d) => d.json())
       .then((res) => {
         setNews(res);

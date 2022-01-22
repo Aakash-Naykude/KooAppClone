@@ -13,7 +13,7 @@ export const UPelections = () => {
 
   const getNews = () => {
     fetch(
-      `http://localhost:4000/upelections`
+      `https://kooappcloneapis.herokuapp.com/upelections`
     )
       .then((d) => d.json())
       .then((res) => {

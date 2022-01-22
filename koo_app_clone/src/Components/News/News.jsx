@@ -12,9 +12,7 @@ export const News = () => {
   }, []);
 
   const getNews = () => {
-    fetch(
-      `http://localhost:4000/new`
-    )
+    fetch(`https://kooappcloneapis.herokuapp.com/new`)
       .then((d) => d.json())
       .then((res) => {
         setNews(res);

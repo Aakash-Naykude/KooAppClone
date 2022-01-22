@@ -12,7 +12,7 @@ export const Cricket = () => {
   }, []);
 
   const getNews = () => {
-    fetch(`http://localhost:4000/sports`)
+    fetch(`https://kooappcloneapis.herokuapp.com/sports`)
       .then((d) => d.json())
       .then((res) => {
         setNews(res);
