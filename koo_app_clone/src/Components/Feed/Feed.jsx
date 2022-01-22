@@ -39,6 +39,31 @@ export const Feed = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
+  const handleAddLike = (likes, postid) => {
+    console.log(likes, postid);
+    const postData = {
+      likes: likes + 1,
+    };
+    console.log(postData);
+    fetch(`http://localhost:4000/userid/post/${postid}`, {
+      method: "PATCH",
+      body: JSON.stringify(postData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        getList();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -182,6 +207,7 @@ export const Feed = () => {
                 likes={e.likes}
                 commentNo={e.commentNo}
                 comments={e.comments}
+                handleAddLike={handleAddLike}
               />
             ))}
           </div>

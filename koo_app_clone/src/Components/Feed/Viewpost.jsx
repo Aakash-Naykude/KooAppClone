@@ -11,15 +11,9 @@ function Viewpost({
   likes,
   commentNo,
   comments,
+  handleAddLike,
 }) {
-  console.log(postid);
-  //const [liked, setLiked] = useState("");
-  //setLiked(likes);
-  const handleAddLike = () => {
-    const postData = {
 
-    };
-  };
   return (
     <div className="maincont">
       <div className="cont1">
@@ -61,7 +55,7 @@ function Viewpost({
       <div className="cont4">
         <div>
           <img
-            onClick={handleAddLike}
+            onClick={() => handleAddLike(likes, postid)}
             src="https://www.kooapp.com/img/cardFooterIcons/likeactive_new.svg"
             alt="like"
           />
