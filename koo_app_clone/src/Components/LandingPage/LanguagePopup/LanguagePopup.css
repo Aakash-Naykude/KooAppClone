@@ -121,14 +121,11 @@
     width: 100%;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
     align-items: center;
     padding: 30px 0;
     height: 40px;
     text-align: center;
     background: transparent;
-    -webkit-transition: background .1s ease-in-out;
-    -o-transition: background ease-in-out .1s;
     transition: background .1s ease-in-out;
 }
 .lang-btn-inner{
