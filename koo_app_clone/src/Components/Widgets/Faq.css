@@ -1,4 +1,9 @@
 
+.head-box{
+    position: -webkit-sticky;
+position: sticky;
+top: 60px;
+}
 
 .questions1{
     display:grid;
@@ -6,7 +11,7 @@
     grid-gap: 0;
     margin:4% 10% 0% 10%;
     border:2px ;
-    height:600px;
+    
     
 }
 
@@ -14,8 +19,15 @@
     border:2px;
     
 }
+.head-box{
+    border:2px ;
+    height:400px;
+}
 
-.head-box>button{
+.head-box>div{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
     border:2px ;
     border-bottom: 1px solid white;
     height:40px;
@@ -26,9 +38,6 @@
     font-weight: 400;
     text-align:left;
     font-size:20px;
-   
-    
-
 }
 
 .h1{

@@ -16,15 +16,15 @@ function Faq() {
 
         <div className="questions1">
             <div className="head-box">
-                <button>Account Settings</button>
-                <button>Queries</button>
-                <button>Troubleshooting</button>
-                <button>Reported Koos and Accounts</button>
-                <button>Legal</button>
-                <button>New User FAQ</button>
-                <button>Following</button>
-                <button>Different Tabs on Koo</button>
-                <button>Contact Us</button>
+                <div>Account Settings</div>
+                <div>Queries</div>
+                <div>Troubleshooting</div>
+                <div>Reported Koos and Accounts</div>
+                <div>Legal</div>
+                <div>New User FAQ</div>
+                <div>Following</div>
+                <div>Different Tabs on Koo</div>
+                <div>Contact Us</div>
 
             </div>
             <div className="scrolling-box">
@@ -78,6 +78,18 @@ function Faq() {
                 <p>We don’t allow changes in contact details as a security measure. In case you are facing any issue while adding your contact details for the ﬁrst time feel free to reach us at redressal@kooapp.com along with your handle and screen recording or screenshot, we will ﬁx it.</p>
                 <div className="h2">Q. Why am I not able to change professional details?</div>
                 <p>We sincerely regret any inconvenience due to this reason. We are aware of the issue and and you will soon be able to change details in the coming updates.</p>
+                <div className="h2">Q. Why are Koos in my feed repeating?</div>
+                <p>We sincerely regret any inconvenience due to this reason. This issue is related to phone build and not all users face this. We will soon resolve this issue and make it available to our users in the coming updates.</p>
+                <div className="h2">Q. Why is my app getting logged out again and again?</div>
+                <p>We sincerely regret any inconvenience due to this reason. This issue is resolved in our recent updates. We request you to uninstall and then reinstall the app. If the issue still persists, please reach out to us at redressal@kooapp.com with your handle and phone number</p>
+                <div className="h2">Q. Notiﬁcations don't lead to the actual content?</div>
+                <p>We sincerely regret any inconvenience due to this reason. Tapping on a notification will take you to the Koo feed which contains many Koos. The photo in the notification need not be necessarily be from from a Koo which is first. You will be able to find the relevant Koo by scrolling down.</p>
+                <div className="h2">Q. The Search bar is not working properly!</div>
+                <p>We sincerely regret any inconvenience due to this reason. We are aware of this issue. and have improved it compared to the previous versions. We request you to check your internet connection and then use it. If it does not work then reach out to us at redressal@kooapp.com.</p>
+                <div className="h2">Q. Unable to remove my proﬁle picture!</div>
+                <p>We sincerely regret any inconvenience due to this reason. We are aware of this request. release it in the coming updates. Please bear with us for some time</p>
+                <div className="h2">Q. I have deleted the chat but still it is there, why?</div>
+                <p>We sincerely regret any inconvenience due to this reason. We are aware of this issue and We will soon resolve this issue and make it available in the coming updates.</p>
             </div>
         </div>
     </div>
