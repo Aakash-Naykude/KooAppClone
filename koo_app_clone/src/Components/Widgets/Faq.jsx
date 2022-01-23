@@ -90,6 +90,23 @@ function Faq() {
                 <p>We sincerely regret any inconvenience due to this reason. We are aware of this request. release it in the coming updates. Please bear with us for some time</p>
                 <div className="h2">Q. I have deleted the chat but still it is there, why?</div>
                 <p>We sincerely regret any inconvenience due to this reason. We are aware of this issue and We will soon resolve this issue and make it available in the coming updates.</p>
+                <div className="h2">Q. New guest account was created, please remove them!</div>
+                <p>We sincerely regret any inconvenience due to this reason. This issue can be resolved with an easy reinstall using the phone number which you used for the first time when you created your original account. These newly created accounts will disappear.</p>
+                <div className="h2">Q. Long videos don’t run, the screen goes off, please help!</div>
+                <p>We sincerely regret any inconvenience due to this reason. We are aware of this request. We are aware of the issue and will soon release it in the upcoming updates. We request you to bear with us for some time.</p>
+                <div className="h2">Q. Accounts deleted are still visible by others even after 30 days!</div>
+                <p>sincerely regret any inconvenience due to this reason. This issue is generally not seen. We request you to reach out to us at redressal@kooapp.com with your handle and phone number linked to it.</p>
+                <div className="h2">Q. Having Typing issues in Hindi</div>
+                <p>We sincerely regret any inconvenience due to this reason. Our team is already working on resolving it.</p>
+
+
+
+
+
+
+
+
+
             </div>
         </div>
     </div>
