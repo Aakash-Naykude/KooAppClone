@@ -56,7 +56,7 @@ export const LanguagePopup = ({ setLang, lang }) => {
                   <div className="lang-available">Available Languages</div>
                   <hr />
                   <div className="lang-button-wrap">
-                    <button className="lang-btns" style={{color:"#0069f6", backgroundColor:"#e0ecfd"}}>
+                    <button className="lang-btns" style={{color:"#0069f6 !important", backgroundColor:"#e0ecfd !important"}}>
                       <div className="lang-btn-inner">
                         <span className="lang-btn-sp">
                           <span className="lang-t">English</span>
@@ -75,7 +75,15 @@ export const LanguagePopup = ({ setLang, lang }) => {
                     </button>
                     <hr />
                   </div>
-                  <LanguageButtons />
+                  <LanguageButtons lang={"हिंदी"} name="(Hindi)" />
+                  <LanguageButtons lang={"ಕನ್ನಡ"} name="(Kannada)" />
+                  <LanguageButtons lang={"தமிழ்"} name="(Tamil)" />
+                  <LanguageButtons lang={"मराठी"} name="(Marathi)" />
+                  <LanguageButtons lang={"বাংলা"} name="(Bangla)" />
+                  <LanguageButtons lang={"অসমীয়া"} name="(Assamese)" />
+                  <LanguageButtons lang={"తెలుగు"} name="(Telugu)" />
+                  <LanguageButtons lang={"ગુજરાતી"} name="(Gujrati)" />
+                  <LanguageButtons lang={"ਪੰਜਾਬੀ"} name="(Punjabi)" />
                 </div>
               </div>
             </div>
