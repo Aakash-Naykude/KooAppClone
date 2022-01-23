@@ -125,8 +125,6 @@ export const Language = () => {
               </div>
             </div>
           </Link>
-          <h1>Language</h1>
-          {/* <Input /> */}
           <div className="pb-72">
             {/* {posts.map((post) => (
         <Post key={post.id} id={post.id} post={post.data()} />

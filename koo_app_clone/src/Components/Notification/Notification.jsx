@@ -16,12 +16,13 @@ export const Notification = () => {
             id="header"
             className="bg-[#F8F7F3] border-gray-700 sticky top-0 z-40 "
           >
-            <h1 className="notificationcont   underline underline-offset-8 ">
+            <h1
+              style={{ fontSize: "20px" }}
+              className="notificationcont   underline underline-offset-8 "
+            >
               Notification
             </h1>
           </div>
-          <h1>Notifications</h1>
-          {/* <Input /> */}
           <div className="pb-72">
             {/* {posts.map((post) => (
       <Post key={post.id} id={post.id} post={post.data()} />

@@ -16,7 +16,7 @@ export const Profile = () => {
         return res.json();
       })
       .then((res) => {
-        console.log(res);
+        console.log(res.following);
         setUserList(res);
       })
       .catch((err) => {
@@ -84,8 +84,22 @@ export const Profile = () => {
               <h1>Joined on {userList.createdAt}</h1>
             </div>
             <div className="profilehead23">
-              <div>{userList.followers} Followers</div>
-              <div>{userList.following} Following</div>
+              <div>
+                <h1>{userList.followers} Followers</h1>
+                <img
+                  className="following"
+                  src="https://user-images.githubusercontent.com/91772445/150653867-e8168210-8ce5-486e-8ccf-2549b43b070e.jpg"
+                  alt="Followers"
+                />
+              </div>
+              <div>
+                <h1>{userList.following} Following</h1>
+                <img
+                  className="following"
+                  src="https://user-images.githubusercontent.com/91772445/150653772-4f2fce31-7383-4f2f-9dc1-3d8467619e20.jpg"
+                  alt="following"
+                />
+              </div>
             </div>
           </div>
           <div className="profilehead3">
