@@ -167,8 +167,18 @@ function Faq() {
                 <div className="h2">Q. What can I post on Koo?</div>
                 <p>You can post anything of your liking as a Koo either as text or video or audio or a combination of these.</p>
                 <br />
-                <p>
-                    Please read and understand the Koo Community Guidelines and Compliance requirements before posting any content. Do not post anything that violates the rights of others or is illegal or otherwise objectionable. Koos violating legal requirements or Community Guidelines will be managed as per law and the process set out at kooapp.com/compliance.</p>
+                <p>Please read and understand the Koo Community Guidelines and Compliance requirements before posting any content. Do not post anything that violates the rights of others or is illegal or otherwise objectionable. Koos violating legal requirements or Community Guidelines will be managed as per law and the process set out at kooapp.com/compliance.</p>
+                <div className="h1">FOLLOWING</div>
+                <p>Love someone's opinion and want to get more updates? You can follow that person and you will get all their posts. You can follow anyone by going to the profile and clicking the ’follow’ button. You can unfollow by going to profile > following > yes.</p>
+                <div className="h2">Q. Where can I follow?</div>
+                <p>You can search for handles, import from contacts or by going to the people tab.</p>
+                <div className="h2">Q. Who is following me?</div>
+                <p>You can find your followers by going to your profile > followers. The followers can only view your Koos and do not have access to DM etc., unless you allow them to. If your Gender and Marital status are turned off to the public, they will not be visible to your followers. You can even block certain followers. Please choose the privacy settings that are most appropriate for you. You can choose to block anyone or make your profile fully public as per your wishes.</p>
+                <div className="h2">Q. Who am I following ?</div>
+                <p>You can find the profiles you follow by going to your Profile > Followers.</p>
+                <div className="h2">Q. Can I block a follower?</div>
+                <p>In case you don't want a particular follower to get your updates you can do by going to your proﬁle > followers > Particular proﬁle > 🚫</p>
+
 
 
 
