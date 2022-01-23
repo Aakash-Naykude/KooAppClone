@@ -178,8 +178,23 @@ function Faq() {
                 <p>You can find the profiles you follow by going to your Profile > Followers.</p>
                 <div className="h2">Q. Can I block a follower?</div>
                 <p>In case you don't want a particular follower to get your updates you can do by going to your proﬁle > followers > Particular proﬁle > 🚫</p>
-
-
+                <div className="h1">DIFFERENT TABS ON KOO</div>
+                <div className="h2">Q. Feed</div>
+                <p>This consists of the posts of the people you follow. We suggest you to follow more profiles if your feed looks quite empty.</p>
+                <div className="h2">Q. People</div>
+                <p>This tab consists of profiles categorized by various professions and categories. Want to get interesting updates you can go to Interesting accounts. Want to know profiles that the community finds engaging? Go on to the popular section.</p>
+                <div className="h2">Q. Trending</div>
+                <p>This tab is a collection of all the highest engaging profiles and Koo that the community absolutely loves. These are koos that are regular and are relevant to the community.</p>
+                <div className="h2">Q. Videos</div>
+                <p>You can find interesting videos or stay relevant to present day to day’s events through this tab.</p>
+                <div className="h2">Q. Polls</div>
+                <p>Get interesting insights from individual polls or organisations polls. We found this tab to be a treasure trove of insights.</p>
+                <div className="h2">Q. New</div>
+                <p>Entering a new platform can seem daunting at first. But we have seen many friendships begin from among new joiners encouraging each other to a very positive experience made by existing users.</p>
+                <br />
+                <p>In addition to these tabs we have a tab based on current affairs like Olympics, TNPL, Sports etc.</p>
+                <div className="h1">CONTACT US</div>
+                <div className="h2">Q. How can I get in touch with Koo?</div>
 
 
 
