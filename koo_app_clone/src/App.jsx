@@ -23,6 +23,7 @@ import Contact from "./Components/Widgets/Contact";
 import Resource from "./Components/Widgets/Resource";
 import Comment from "./Components/Feed/Comment";
 import Faq from "./Components/Widgets/Faq";
+import Sitemap from "./Components/Widgets/Sitemap"
 import Editprofile from "./Components/Editprofile/Editprofile";
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           <Route path="/resource" element={<Resource />}></Route>
           <Route path="/faq" element={<Faq />}></Route>
           <Route path="/editprofile" element={<Editprofile />}></Route>
+          <Route path="/sitemap" element={<Sitemap />}></Route>
         </Routes>
       </div>
     </div>

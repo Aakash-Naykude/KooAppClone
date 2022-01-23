@@ -48,8 +48,8 @@ function Widgets({ trendingResults, followResults }) {
             <Link to="/resource">
               <p>Resource Center</p>
             </Link>
+            <Link to="/sitemap"><p>Sitemap</p></Link>
 
-            <p>Sitemap</p>
             <Link to="/faq">
               <p>FAQs</p>
             </Link>
