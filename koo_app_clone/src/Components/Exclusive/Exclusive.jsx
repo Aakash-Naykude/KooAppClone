@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
+import UPfeed from "../UPelections/UPfeed";
 import Widgets from "../Widgets/Widgets";
 import "./Exclusive.css";
 export const Exclusive = () => {
+  let [news, setNews] = useState([]);
+
+  useEffect(() => {
+    getNews();
+  }, []);
+
+  const getNews = () => {
+    fetch(`https://kooappcloneapis.herokuapp.com/exclusive`)
+      .then((d) => d.json())
+      .then((res) => {
+        setNews(res);
+        console.log(res);
+      });
+  };
+  var mybutton = document.getElementById("backtotopbtn");
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 900 ||
+      document.documentElement.scrollTop > 900
+    ) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -105,7 +141,13 @@ export const Exclusive = () => {
               </h2>
             </Link>
           </div>
-
+          <button
+            onClick={topFunction}
+            id="backtotopbtn"
+            className="backtotop  sticky top-20 "
+          >
+            Back To Top
+          </button>
           <Link to="/addinput">
             <div className="inputbar">
               <div style={{ display: "flex" }}>
@@ -125,12 +167,16 @@ export const Exclusive = () => {
               </div>
             </div>
           </Link>
-          <h1>Exclusive</h1>
-          {/* <Input /> */}
           <div className="pb-72">
-            {/* {posts.map((post) => (
-        <Post key={post.id} id={post.id} post={post.data()} />
-      ))} */}
+            {news.map((e) => (
+              <UPfeed
+                key={e.publishedAt}
+                head={e.source.name}
+                author={e.author}
+                brif={e.content}
+                image={e.urlToImage}
+              />
+            ))}
           </div>
         </div>
         <Widgets />

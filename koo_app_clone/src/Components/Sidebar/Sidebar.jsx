@@ -6,8 +6,13 @@ import SidebarOptions from "./SidebarOptions";
 // import { Button } from "@mui/material";
 
 function Sidebar() {
-   const { username } = useContext(UserContext);
+  //const { username, handleUsername } = useContext(UserContext);
+  const username = localStorage.getItem("userid");
 
+  const handleLogout = () => {
+    localStorage.setItem("userid", "");
+    localStorage.setItem("email", "");
+  };
   return (
     <div className="hidden sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full">
       <div id="tabcont" className="space-y-2.5 mt-4 mb-2.5 xl:ml-24">
@@ -27,7 +32,6 @@ function Sidebar() {
           />
         </Link>
 
-        {console.log(username)}
         {username ? (
           <Link to="/profile">
             <SidebarOptions
@@ -64,12 +68,14 @@ function Sidebar() {
         )}
 
         {username ? (
-          <Link to="/">
-            <SidebarOptions
-              Icon={"https://www.kooapp.com/assets/a22093ce.svg"}
-              text="Logout"
-            />
-          </Link>
+          <div onClick={handleLogout}>
+            <Link to="/">
+              <SidebarOptions
+                Icon={"https://www.kooapp.com/assets/a22093ce.svg"}
+                text="Logout"
+              />
+            </Link>
+          </div>
         ) : (
           <></>
         )}

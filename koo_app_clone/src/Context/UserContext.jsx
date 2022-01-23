@@ -12,6 +12,21 @@ export const UserContextProvider = ({ children }) => {
   const handleUsername = (usrnm) => {
     setUsername(usrnm);
   };
-  const value = { name, username, otp, setOtp, handleName, handleUsername };
+
+  const [comment, setComment] = useState("");
+  const addCommentToPost = (add) => {
+    setComment(add);
+  };
+
+  const value = {
+    name,
+    username,
+    otp,
+    setOtp,
+    handleName,
+    handleUsername,
+    comment,
+    addCommentToPost,
+  };
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

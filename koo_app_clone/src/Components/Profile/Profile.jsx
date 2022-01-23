@@ -1,13 +1,29 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../Context/UserContext";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./Profile.css";
 export const Profile = () => {
-  const { handleUsername, username } = useContext(UserContext);
-
-  handleUsername("test");
+  const userMail = localStorage.getItem("email");
+  const userId = localStorage.getItem("userid");
+  const [userList, setUserList] = useState([]);
+  useEffect(() => {
+    getUserData();
+  }, []);
+  const getUserData = () => {
+    fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res.following);
+        setUserList(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  console.log(userList.name);
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -18,11 +34,15 @@ export const Profile = () => {
         >
           <div className="profilehead1">
             <div>
-              <img
-                src="https://www.kooapp.com/img/ic_back.svg"
-                alt="backtofeed"
-              />
-              <h1>Fake name</h1>
+              <Link to="/feed">
+                <img
+                  className="profilehead1img"
+                  src="https://www.kooapp.com/img/ic_back.svg"
+                  alt="backtofeed"
+                />
+              </Link>
+
+              <h1>{userList.name}</h1>
             </div>
             <div>
               <img
@@ -48,21 +68,38 @@ export const Profile = () => {
                 src="https://www.kooapp.com/img/profilePlaceholder.svg"
                 alt="profile"
               />
-              <button>Edit Profile</button>
+
+              <button>
+                <Link to="/editprofile">Edit Profile </Link>
+              </button>
             </div>
-            <h1>name</h1>
-            <h2>usename</h2>
+            <h1>{userList.name}</h1>
+            <h2>{userList.username}</h2>
             <p>Koo Your Opinion</p>
             <div className="profilehead22">
               <img
                 src="https://www.kooapp.com/img/ic_calendar.svg"
                 alt="calender"
               />
-              <h1>Joined on Jan 2022</h1>
+              <h1>Joined on {userList.createdAt}</h1>
             </div>
             <div className="profilehead23">
-              <div>2 Followers</div>
-              <div>49 Following</div>
+              <div>
+                <h1>{userList.followers} Followers</h1>
+                <img
+                  className="following"
+                  src="https://user-images.githubusercontent.com/91772445/150653867-e8168210-8ce5-486e-8ccf-2549b43b070e.jpg"
+                  alt="Followers"
+                />
+              </div>
+              <div>
+                <h1>{userList.following} Following</h1>
+                <img
+                  className="following"
+                  src="https://user-images.githubusercontent.com/91772445/150653772-4f2fce31-7383-4f2f-9dc1-3d8467619e20.jpg"
+                  alt="following"
+                />
+              </div>
             </div>
           </div>
           <div className="profilehead3">

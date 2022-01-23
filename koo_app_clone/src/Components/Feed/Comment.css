@@ -7,8 +7,8 @@
   margin-top: 39px;
   border: 1px solid #e0e0e0;
   background-color: #fdfdfd;
-  height: 440px;
   border-radius: 9px;
+  height: auto;
 }
 #cont1 {
   display: flex;
@@ -102,4 +102,56 @@
   border-radius: 13px;
   border: 2px solid #f0f0f0;
   background-color: white;
+  margin-bottom: 10px;
+}
+#addPostToComment {
+  border: 2px solid #f0f0f0;
+  width: 94%;
+  margin-left: 3%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+#addPostToComment > .addPostToCommentcont1 {
+  display: flex;
+  gap: 2%;
+}
+
+.addPostToCommentprofilepic {
+  width: 48px;
+  border-radius: 50%;
+}
+.addPostToCommentname {
+  font-size: 18px;
+  font-weight: 600;
+}
+.addPostToCommentusername {
+  margin-top: 3px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#addPostToComment > .addPostToCommentcont2 {
+  width: 90%;
+  margin-left: 8.5%;
+  font-size: 18px;
+}
+#addPostToComment > .addPostToCommentcont3 {
+  width: 90%;
+  margin-left: 8.5%;
+  margin-top: 1.5%;
+}
+#addPostToComment > .addPostToCommentcont3 > img {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 12px;
+}
+
+.addPostToCommentwhatsappicon {
+  width: 25px;
+  background-color: white;
+  color: white;
+  padding: 2px;
+}
+.addPostToCommentprofilepic {
+  margin: 8px 0 0 8px;
 }

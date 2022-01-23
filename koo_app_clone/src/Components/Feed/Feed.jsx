@@ -1,22 +1,20 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../Context/UserContext";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./Feed.css";
 import Viewpost from "./Viewpost";
 export const Feed = () => {
   const [list, setList] = useState([]);
-  const { handleUsername, username } = useContext(UserContext);
-
-  handleUsername("test");
   useEffect(() => {
     getList();
   }, []);
   const getList = () => {
-    fetch("http://localhost:4000/userid/post")
+    fetch("https://kooappcloneapis.herokuapp.com/userid/post")
       .then((res) => res.json())
-      .then((json) => setList(json));
+      .then((json) => {
+        setList(json);
+      });
   };
   console.log(list);
 
@@ -41,6 +39,37 @@ export const Feed = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
+  const userMail = localStorage.getItem("email");
+  const userId = localStorage.getItem("userid");
+  const handleAddLike = (likes, postid) => {
+    if (userMail.length > 0) {
+      console.log(likes, postid);
+      const postData = {
+        likes: likes + 1,
+      };
+      console.log(postData);
+      fetch(`https://kooappcloneapis.herokuapp.com/userid/post/${postid}`, {
+        method: "PATCH",
+        body: JSON.stringify(postData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((res) => {
+          console.log(res);
+          getList();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      alert("Please Sign in first to like, post, share.")
+    }
+  };
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -172,7 +201,20 @@ export const Feed = () => {
 
           <div className="pb-72">
             {list.map((e) => (
-              <Viewpost key={e._id} title={e.postdata} image={e.imageupload} />
+              <Viewpost
+                key={e._id}
+                profile_pic={e.profile_pic}
+                name={e.name}
+                username={e.username}
+                userid={e.userid}
+                postid={e._id}
+                title={e.postdata}
+                image={e.imageupload}
+                likes={e.likes}
+                commentNo={e.commentNo}
+                comments={e.comments}
+                handleAddLike={handleAddLike}
+              />
             ))}
           </div>
         </div>

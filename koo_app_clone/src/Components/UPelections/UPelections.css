@@ -49,3 +49,12 @@
 .addiconlogo {
   padding: 14px;
 }
+.backtotop {
+  background-color: #809b9d;
+  color: white;
+  padding: 6px;
+  border-radius: 17px;
+  font-weight: 600;
+  margin-left: 45%;
+  display: none;
+}

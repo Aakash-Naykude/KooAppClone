@@ -1,20 +1,75 @@
 import React, { useContext, useState } from "react";
+import { Navigate } from "react-router-dom";
 import { UserContext } from "../../../Context/UserContext";
 import "./LoginPopup.css";
 export const EmailOtp = ({ settrigger, trigger, email, setEmail }) => {
   const { otp, setOtp } = useContext(UserContext);
   const [userOtp, setUserOtp] = useState("");
-  const handleCheck = () => {
+  function handleCheck() {
     console.log(otp, userOtp);
     if (otp == userOtp) {
-      alert("hii");
-      //fetch
-      //navigate
+      return <Navigate to="/feed" />;
     } else {
-      alert("byyy");
+      alert("enter correct otp");
     }
     setOtp(null);
-  };
+  }
+  const userMail = localStorage.getItem("email");
+  if (otp == userOtp) {
+    console.log(userMail);
+    localStorage.setItem("userid", userMail);
+    fetch(`https://kooappcloneapis.herokuapp.com/user/email/${userMail}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        if (res.length > 0) {
+          console.log("No Need");
+          var hellouser = res[res.length - 1];
+          localStorage.setItem("userid", hellouser._id);
+          localStorage.setItem("email", hellouser.email);
+          //return <Navigate to="/feed" />;
+        } else {
+          console.log("creating new user");
+          const usernamename = "guest_" + Math.floor(Math.random() * 90) + 10;
+          const payload = {
+            name: usernamename,
+            username: usernamename,
+            email: userMail,
+            mobilenumber: "",
+            profile_pic: "https://www.kooapp.com/img/profilePlaceholder.svg",
+            followers: 0,
+            following: 0,
+          };
+          fetch("https://kooappcloneapis.herokuapp.com/user", {
+            method: "POST",
+            body: JSON.stringify(payload),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+            .then((res) => {
+              return res.json();
+            })
+            .then((res) => {
+              console.log(res);
+
+              localStorage.setItem("userid", res._id);
+              localStorage.setItem("email", res.email);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+          //return <Navigate to="/feed" />;
+        }
+        return <Navigate to="/feed" />;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    return <Navigate to="/feed" />;
+  }
   return trigger ? (
     <div>
       <div id="unblurred" className="popup-login">
@@ -35,12 +90,7 @@ export const EmailOtp = ({ settrigger, trigger, email, setEmail }) => {
             </div>
             {/* <hr /> */}
             <div className="input-cont-popup">
-              <div className="inpt-cont-inner">
-                {/* <div className="cont-code">
-                          🇮🇳
-                          <span>+91</span>
-                        </div> */}
-              </div>
+              <div className="inpt-cont-inner"></div>
               <input
                 class="phn-inpt"
                 id="phone"

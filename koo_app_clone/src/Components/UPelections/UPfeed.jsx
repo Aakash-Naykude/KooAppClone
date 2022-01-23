@@ -1,26 +1,6 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import { UserContext } from "../../Context/UserContext";
-import "./Viewpost.css";
-function Viewpost({
-  profile_pic,
-  name,
-  username,
-  userid,
-  postid,
-  title,
-  image,
-  likes,
-  commentNo,
-  comments,
-  handleAddLike,
-}) {
-  const { addCommentToPost } = useContext(UserContext);
-  const handleComment = (postid) => {
-    //addCommentToPost(idofpost);
-    console.log("hiii");
-    localStorage.setItem("postid", postid);
-  };
+import React from "react";
+import "./UPfeed.css";
+function UPfeed({ head, author, brif, image }) {
   return (
     <div className="maincont">
       <div className="cont1">
@@ -35,12 +15,12 @@ function Viewpost({
         )}
 
         <div>
-          <h1 className="name">{username}</h1>
-          <h2 className="username">{username}</h2>
+          <h1 className="name">{head}</h1>
+          <h2 className="username">{author}</h2>
         </div>
       </div>
       <div className="cont2">
-        <h1>{title}</h1>
+        <h1>{brif}</h1>
       </div>
       <div className="cont3">
         {image ? (
@@ -62,18 +42,17 @@ function Viewpost({
       <div className="cont4">
         <div>
           <img
-            onClick={() => handleAddLike(likes, postid)}
             src="https://www.kooapp.com/img/cardFooterIcons/likeactive_new.svg"
             alt="like"
           />
-          <h1>{likes}</h1>
+          {/* <h1>2</h1> */}
         </div>
         <div>
           <img
             src="https://www.kooapp.com/img/cardFooterIcons/comment_new.svg"
             alt="comment"
           />
-          <h1>{commentNo}</h1>
+          {/* <h1>2</h1> */}
         </div>
         <div>
           <img
@@ -82,11 +61,7 @@ function Viewpost({
           />
         </div>
         <div>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://api.whatsapp.com/send?text=Check%20this%20post%20from%20Republic%20on%20Koo%20App%3A%0A%0A%22%20%23EndHinduphobia%20%7C%20Out%20of%20all%20issues%20concerning%20our%20country%2C%20...%22%0Ahttps%3A%2F%2Fwww.kooapp.com%2Fkoo%2Frepublic%2Fb011ac68-b01b-416a-b8e1-e6441bf9d597%0A%0ADownload%20Koo%20App%3A%20%0Ahttp%3A%2F%2Fwww.kooapp.com%2Fdnld%0A%0A%20%20"
-          >
+          <a href="https://api.whatsapp.com/send?text=Check%20this%20post%20from%20Republic%20on%20Koo%20App%3A%0A%0A%22%20%23EndHinduphobia%20%7C%20Out%20of%20all%20issues%20concerning%20our%20country%2C%20...%22%0Ahttps%3A%2F%2Fwww.kooapp.com%2Fkoo%2Frepublic%2Fb011ac68-b01b-416a-b8e1-e6441bf9d597%0A%0ADownload%20Koo%20App%3A%20%0Ahttp%3A%2F%2Fwww.kooapp.com%2Fdnld%0A%0A%20%20">
             <img
               className="whatsappicon"
               src="https://www.kooapp.com/img/cardFooterIcons/whatsapp_new.svg"
@@ -101,17 +76,15 @@ function Viewpost({
           />
         </div>
       </div>
-      <Link to="/comments">
-        <div className="cont5" onclick={() => handleComment(postid)}>
-          <img
-            src="https://www.kooapp.com/img/profilePlaceholderYellow.svg"
-            alt="comment"
-          />
-          <h1>Write Your Comment...</h1>
-        </div>
-      </Link>
+      <div className="cont5">
+        <img
+          src="https://www.kooapp.com/img/profilePlaceholderYellow.svg"
+          alt="comment"
+        />
+        <h1>Write Your Comment...</h1>
+      </div>
     </div>
   );
 }
 
-export default Viewpost;
+export default UPfeed;

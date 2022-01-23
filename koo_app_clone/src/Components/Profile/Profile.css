@@ -15,7 +15,7 @@
   font-size: 18px;
   font-weight: 600;
 }
-.profilehead1 > div > img {
+.profilehead1img {
   width: 22px;
   margin-right: 12px;
 }
@@ -96,4 +96,7 @@
   font-size: 16px;
   margin-top: 2px;
   margin-left: 10px;
+}
+.following {
+  margin-left: -15px;
 }

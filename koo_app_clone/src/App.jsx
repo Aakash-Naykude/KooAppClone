@@ -20,6 +20,10 @@ import { Notification } from "./Components/Notification/Notification";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import About from "./Components/Widgets/About";
 import Contact from "./Components/Widgets/Contact";
+import Resource from "./Components/Widgets/Resource";
+import Comment from "./Components/Feed/Comment";
+import Faq from "./Components/Widgets/Faq";
+import Editprofile from "./Components/Editprofile/Editprofile";
 
 function App() {
   return (
@@ -43,8 +47,12 @@ function App() {
           <Route path="/language" element={<Language />}></Route>
           <Route path="/notification" element={<Notification />}></Route>
           <Route path="/createkoo" element={<CreateKoo />}></Route>
+          <Route path="/comments" element={<Comment />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/resource" element={<Resource />}></Route>
+          <Route path="/faq" element={<Faq />}></Route>
+          <Route path="/editprofile" element={<Editprofile />}></Route>
         </Routes>
       </div>
     </div>

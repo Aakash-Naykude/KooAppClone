@@ -32,6 +32,7 @@ export const EmailLogin = ({
     alert("otp sent to your email");
     console.log(otp);
     setOtp(check);
+    localStorage.setItem("email", enterdEmail)
   };
 
   const getMail = (e) => {

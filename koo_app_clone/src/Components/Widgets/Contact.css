@@ -9,6 +9,11 @@
     top: 0px;
 } 
 
+.mail{
+    color:#90A4AE;
+
+}
+
 .all-queries{
    
     color:white;
@@ -28,6 +33,13 @@
     line-height: 35px;
 }
 
+.heading1{
+    color:black;
+    font-size:23px;
+    font-weight:700;
+    margin-top:2%;
+}
+
 .heading{
     color:black;
     font-size:23px;
@@ -35,7 +47,10 @@
 }
 
 .query{
+    
+    margin-top: 50px;
     text-align: center;
+    
 }
 
 .all-queries{
@@ -51,7 +66,7 @@
     border-style:dashed;
     width: 70%;
     margin:auto;
-    margin-top:1%;
+    margin-top:2%;
 }
 .matter{
     width: 70%;

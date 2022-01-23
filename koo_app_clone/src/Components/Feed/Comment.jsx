@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Addinput.css";
+import "./Comment.css";
 import { Picker } from "emoji-mart";
 import "emoji-mart/css/emoji-mart.css";
 import "./Modal.css";
+import { UserContext } from "../../Context/UserContext";
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 const mic = new SpeechRecognition();
@@ -11,7 +12,7 @@ const mic = new SpeechRecognition();
 mic.continuous = true;
 mic.interimResults = true;
 mic.lang = "en-US";
-function AddInput() {
+function Comment() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [length, setLength] = useState(0);
@@ -23,11 +24,15 @@ function AddInput() {
   const userId = localStorage.getItem("userid");
   const [isListening, setIsListening] = useState(false);
   const [userList, setUserList] = useState([]);
+
+  const { comment } = useContext(UserContext);
   useEffect(() => {
     getUserData();
   }, []);
+
   const getUserData = () => {
-    fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`)
+    console.log(localStorage.getItem("postid"));
+    fetch(`https://kooappcloneapis.herokuapp.com/userid/post/`)
       .then((res) => {
         return res.json();
       })
@@ -68,7 +73,6 @@ function AddInput() {
         })
         .then((res) => {
           console.log(res);
-          alert("Koo Posted successfully");
         })
         .catch((err) => {
           console.log(err);
@@ -77,31 +81,6 @@ function AddInput() {
       alert(`Please Sign in first to make post`);
     }
 
-    // const docRef = await addDoc(collection(db, "posts"), {
-    //   id: session.user.uid,
-    //   username: session.user.name,
-    //   userImg: session.user.image,
-    //   tag: session.user.tag,
-    //   text: input,
-    //   timestamp: serverTimestamp(),
-    // });
-
-    //console.log(downloadURL);
-
-    // const imageRef = ref(storage, `posts/image`);
-
-    // if (selectedFile) {
-    //   await uploadString(imageRef, selectedFile, "data_url").then(async () => {
-    //     const downloadURL = await getDownloadURL(imageRef);
-    //     //console.log(downloadURL);
-    //     //console.log(selectedFile);
-    //     await updateDoc(doc(db, "posts/image"), {
-    //       image: downloadURL,
-    //     });
-    //   });
-    // }
-
-    // console.log(selectedFile);
     setLoading(false);
     setInput("");
     setSelectedFile(null);
@@ -174,7 +153,6 @@ function AddInput() {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
-    console.log(modal);
     setModal(!modal);
   };
 
@@ -184,6 +162,7 @@ function AddInput() {
     document.body.classList.remove("active-modal");
   }
 
+  const image = false;
   return (
     <div id="input_cont">
       <div
@@ -214,12 +193,50 @@ function AddInput() {
             </button>
           </div>
         </div>
-        <div id="cont2">
-          <h1>+</h1>
-          <p className="decoration-indigo-900 border-gray-700  underline underline-offset-8 ">
-            English
-          </p>
+
+        <div id="addPostToComment">
+          <div className="addPostToCommentcont1">
+            {image ? (
+              <img
+                className="addPostToCommentprofilepic"
+                src={image}
+                alt="postimg"
+              />
+            ) : (
+              <img
+                className="addPostToCommentprofilepic"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzyALOcLp4ykOIC4bim8L0xZIvgfLLZEo-mg&usqp=CAU"
+                alt="postimg"
+              />
+            )}
+
+            <div>
+              <h1 className="addPostToCommentname">username</h1>
+              <h2 className="addPostToCommentusername">username</h2>
+            </div>
+          </div>
+          <div className="addPostToCommentcont2">
+            <h1>title</h1>
+          </div>
+          <div className="addPostToCommentcont3">
+            {/* {image ? (
+              <img className="addPostToCommentprofilepic" src={image} alt="postimg" />
+            ) : (
+              ""
+              //   <img
+              //     className="addPostToCommentprofilepic"
+              //     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzyALOcLp4ykOIC4bim8L0xZIvgfLLZEo-mg&usqp=CAU"
+              //     alt="postimg"
+              //   />
+            )} */}
+
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1MvKGlOE7ERr4LBkTnMLIJgHZE_1zewZHvw&usqp=CAU"
+              alt="postedimg"
+            />
+          </div>
         </div>
+
         <div id="cont3">
           <input
             style={{ padding: "10px" }}
@@ -328,4 +345,4 @@ function AddInput() {
   );
 }
 
-export default AddInput;
+export default Comment;
