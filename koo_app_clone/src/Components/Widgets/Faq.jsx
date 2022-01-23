@@ -67,7 +67,17 @@ function Faq() {
                 <div className="h2">Q. Why are my Koos not shown in trending hashtags?</div>
                 <p>Trending Koos are the ones that the community loves and engages with. Koos in trending hashtags are shown on reaction basis and not on ‘how recent a Koo’ is. We will be releasing a filter in the feed where you can change your mode from “Most Engaging” post to ‘Latest’ post. For a better user experience we recommend you to post a minimum of 2 Koos daily.</p>
                 <div className="h2">Q. I see a lot of abusive/hateful language. What can I do?</div>
-
+                <p>Abusive and hateful language is something we do not encourage on Koo and require all content to comply with our Community Guidelines. Please use our in app reporting feature to report such Koo. A review will be made based on legal guidelines and community reporting. To report a Koo, please use the two dots on the top right corner of a Koo and from the index choose Report Koo. A Koo can be reported for any of the reasons listed in the index.</p>
+                <div className="h2">Q. Someone is impersonating me, what can I do?</div>
+                <p>If someone is impersonating you then please report such a profile. To report, please use the two dots on the top right corner of a Koo and from the index choose Report User. A User can be reported for any of the reasons listed in the index including “pretending to be me or someone else”.</p>
+                <div className="h2">Q. When is the Dark Mode coming?</div>
+                <p>Dark mode is available from version 0.92.0 or higher. We request you to update your app to the latest version. You can choose between the light and dark themes as your preference. The settings can be found in ⚙ > Themes.</p>
+                <div className="h2">Q. I don’t ﬁnd the latest version after I receive a notiﬁcation of an update. Why?</div>
+                <p>Updates are applied in a phased manner to ensure minimal impact of bugs. Please have patience and the new features will be visible soon</p>
+                <div className="h2">Q. Why can’t I change my Number or email address?</div>
+                <p>We don’t allow changes in contact details as a security measure. In case you are facing any issue while adding your contact details for the ﬁrst time feel free to reach us at redressal@kooapp.com along with your handle and screen recording or screenshot, we will ﬁx it.</p>
+                <div className="h2">Q. Why am I not able to change professional details?</div>
+                <p>We sincerely regret any inconvenience due to this reason. We are aware of the issue and and you will soon be able to change details in the coming updates.</p>
             </div>
         </div>
     </div>
