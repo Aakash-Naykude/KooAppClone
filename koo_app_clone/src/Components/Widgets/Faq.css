@@ -4,6 +4,9 @@
 position: sticky;
 top: 60px;
 }
+p{
+    color: black;
+}
 
 .questions1{
     display:grid;

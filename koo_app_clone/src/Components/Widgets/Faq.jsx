@@ -28,7 +28,7 @@ function Faq() {
 
             </div>
             <div className="scrolling-box">
-                <div>HAVE MORE QUESTIONS? CHAT WITH US ON WHATSAPP: +91-6301452077</div>
+                <div style={{ color: "black" }} >HAVE MORE QUESTIONS? CHAT WITH US ON WHATSAPP: +91-6301452077</div>
                 <div className="h1">ACCOUNT SETTINGS</div>
                 <div className="h2">Q. Edit Proﬁle Picture</div>
                 <p>You can edit your profile picture by going to ⚙ > Edit Profile > . You can either take a photo or upload from your gallery. In addition to this you can add frames by going to app settings > Edit Profile >⊕, you can select from #Vaccinated, #Plasmadonor or #Readytodonate.</p>
