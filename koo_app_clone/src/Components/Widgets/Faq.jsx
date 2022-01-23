@@ -146,6 +146,30 @@ function Faq() {
                 <p>In accordance with the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, Koo provides User(s) with an adequate and reasonable opportunity to dispute an action taken on the content of a user. Such User(s) may request for reinstatement of access to such content. These requests will be decided within a reasonable time in accordance with law. You can read more about the same on our Compliance page.</p>
                 <div className="h2">Q. I want to report a copyright violation?</div>
                 <p>Koo does not undertake any obligation to monitor user generated content, except to the extent required by law. Koo is only an intermediary that primarily enables online interaction between two or more users and allows them to create, upload, share, disseminate, modify or access information using Koo's services. While Koo supports valid and legitimate claims of intellectual property ownership, it cannot and does not adjudicate any claims. In the first instance, parties must resolve any disputes relating to intellectual property amongst themselves or through legal process, before reporting to Koo. Please read more and use the reporting form on our Compliancepage.</p>
+                <div className="h1">ARE YOU A NEW USER? CHECK OUT NEW USER FAQ</div>
+                <div className="h1">NEW USER FAQ</div>
+                <div className="h2">Q. What is Koo app?</div>
+                <p>Koo App is a microblogging platform where individuals can voice their opinions in regional Indian languages as well as English. Users post Koos, which could be a simple text, or a photo or a video or a combination. These Koos are visible to your followers or anyone who searches for your profile. If the community reacts to the contents of your Koo, they show up in the trending section.</p>
+                <div className="h2">Q. Which different devices can be compatible with Koo?</div>
+                <p>An internet connection and a mobile device or a computer are sufficient to use the Koo App. The Koo App can be downloaded from PlayStore and App Store. If you are someone who loves to use Koo on your computer, you can go here.</p>
+                <div className="h2">Q. What's a Koo post?</div>
+                <p>A koo is an opinion expressed by you in any form, such as text, photo, video or a combination of any of these. To post a Koo simply click on the + and you are ready to express yourself. We have additional surprise for you, while inserting any text, simply click on the + and select multiple languages and now you are multilinguist. Make sure your posts reflect who you truly are and do not post anything that may embarrass you or others.</p>
+                <div className="h2">Q. Loved a Koo and want to share it?</div>
+                <p>Came across something interesting and want to share it with your circle, then simply click on Re-Koo and now your circle can see the content. You can even Re-Koo and add up your thoughts by pressing the Re-Koo with the Comment.</p>
+                <div className="h2">Q. Love to express yourself in pictures?</div>
+                <p>You can upload pictures directly to your gallery by selecting the picture > share > Koo > post. Alternatively, you can do it through the app by clicking on + > > select the picture > post. Please ensure that you are not posting any content that is illegal or violates the privacy of others.</p>
+                <div className="h2">Q. Can I dictate my opinion?</div>
+                <p>Sure whatever suits you best. You can also dictate your opinion on Koo by clicking on + > 🗣 and voila you are now having a hands free experience. Here is a small trivia. Did you know Koo is the ﬁrst social media platform to release this feature in the whole world?</p>
+                <div className="h2">Q. Can I edit a Koo?</div>
+                <p>Yes you can edit a Koo if there has been no interaction from the community. If the Koo has been viewed or has any user engagement and you would still like to edit, it is best to delete the Koo and post a new one.</p>
+                <div className="h2">Q. Can I customise the colour of the UI?</div>
+                <p>There are currently three view customisations currently available namely Dark, Light and System. Dark is where the background of the app is darker and is comfortable for the eyes in low light situations. Light view is a brighter background of the app. System is based on the system settings if dark mode gets enabled on your phone then the same happens on the app. You can change the settings by clicking Proﬁle Picture > ⚙ > Theme.</p>
+                <div className="h2">Q. What can I post on Koo?</div>
+                <p>You can post anything of your liking as a Koo either as text or video or audio or a combination of these.</p>
+                <br />
+                <p>
+                    Please read and understand the Koo Community Guidelines and Compliance requirements before posting any content. Do not post anything that violates the rights of others or is illegal or otherwise objectionable. Koos violating legal requirements or Community Guidelines will be managed as per law and the process set out at kooapp.com/compliance.</p>
+
 
 
 
