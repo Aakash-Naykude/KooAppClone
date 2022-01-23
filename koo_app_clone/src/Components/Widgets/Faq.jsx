@@ -54,6 +54,19 @@ function Faq() {
                 <p>At the moment we do not have this feature. Please be assured that we are working on making this ava</p>
                 <div className="h2">Q. My scrolling is not smooth. Can you help?</div>
                 <p>This issue may occur with certain devices. Please reach out to aakashnaykude123@gmail.com for more information. We are also constantly working to improve user experience</p>
+                <div className="h2">Q. Why is the app slow?</div>
+                <p>In our recent update we have released a faster and better UI. . Please check your internet speed, clear your cache files or restart the phone. If the problem still persists, kindly drop us an email at aakashnaykude123@gmail.com along with your handle and screen recording or screenshot .</p>
+                <div className="h2">Q. My Followers are not increasing, what should I do?</div>
+                <p>An increase/decrease in followers is a reflection of your activity on the platform and the community’s interest. This is a very democratic process and we do not have any direct role to play.
+
+                    For an engaging experience at Koo we request you to post a minimum of two Koos everyday.
+
+                    Kindly drop us a mail at redressal@kooapp.com along with your handle and screen recording or screenshot, for us to check for any technical issue.</p>
+                <div className="h2">Q. I have applied for Eminence but there has been no response?</div>
+                <p>Koo's Eminence criteria is transparently listed here. For any Eminence related queries kindly drop us an email at eminence.verification@kooapp.com along with your handle. Alternatively, For applying for verification you can go to ⚙ > 'apply for verified badge option'.</p>
+                <div className="h2">Q. Why are my Koos not shown in trending hashtags?</div>
+                <p>Trending Koos are the ones that the community loves and engages with. Koos in trending hashtags are shown on reaction basis and not on ‘how recent a Koo’ is. We will be releasing a filter in the feed where you can change your mode from “Most Engaging” post to ‘Latest’ post. For a better user experience we recommend you to post a minimum of 2 Koos daily.</p>
+                <div className="h2">Q. I see a lot of abusive/hateful language. What can I do?</div>
 
             </div>
         </div>
