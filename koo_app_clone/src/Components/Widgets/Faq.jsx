@@ -98,8 +98,18 @@ function Faq() {
                 <p>sincerely regret any inconvenience due to this reason. This issue is generally not seen. We request you to reach out to us at redressal@kooapp.com with your handle and phone number linked to it.</p>
                 <div className="h2">Q. Having Typing issues in Hindi</div>
                 <p>We sincerely regret any inconvenience due to this reason. Our team is already working on resolving it.</p>
-
-
+                <div className="h1">TROUBLESHOOTING</div>
+                <p>There is a constant traﬃc we receive and there might be a delay from our end due to this. We request you do the following, while awaiting our response.</p>
+                <div className="h2">Q. Not getting any Notiﬁcations</div>
+                <p>A common reason for not receiving notifications is that they may be turned off in the settings. We request you to go to app settings > Notifications and set your preferences. If all the notifications are turned on and you are not receiving notifications we request you to go to phone settings > Notifications > Manage Notifications > Koo and set it to on. If the issue persists, kindly mail us at redressal@kooapp.comalong with your handle and screen recording or screenshot, we will fix it., and we’ll ensure a quick resolution.</p>
+                <div className="h2">Q. Receiving too many notiﬁcations</div>
+                <p>We request you to go to app settings > Notifications > and set all your notifications off. If you want to totally stop receiving notifications, we request you to your phone settings > notifications> Koo and turn off notifications. If the issue persists, kindly mail us at redressal@kooapp.com along with your handle and screen recording or screenshot, we will fix it., and we’ll ensure a quick resolution redressal@kooapp.com.</p>
+                <div className="h2">Q. Not getting OTP</div>
+                <p>If any situation arises where you do not receive an OTP we request you to reinstall the app. Also check your mobile network. In most cases, this has resolved the issue. If the issue persists, kindly mail us at redressal@kooapp.com along with your handle and screen recording or screenshot, we will ﬁx it., and we’ll ensure a quick resolution.</p>
+                <div className="h2">Q. App is not opening</div>
+                <p>We regret the inconvenience caused. We request you to reinstall/ update the app. Also check your internet connection. If the issue persists feel free to drop us a mail along with the screenshot at redressal@kooapp.com as it helps our team understand the issue better.</p>
+                <div className="h2">Q. My app hangs while creating a Koo.</div>
+                <p>This is not the expected behaviour of the app. We request you to reinstall/ update the app. If the issue persists feel free to drop us a mail along with the screenshot at redressal@kooapp.com as it helps our team understand the issue better.</p>
 
 
 
