@@ -110,7 +110,22 @@ function Faq() {
                 <p>We regret the inconvenience caused. We request you to reinstall/ update the app. Also check your internet connection. If the issue persists feel free to drop us a mail along with the screenshot at redressal@kooapp.com as it helps our team understand the issue better.</p>
                 <div className="h2">Q. My app hangs while creating a Koo.</div>
                 <p>This is not the expected behaviour of the app. We request you to reinstall/ update the app. If the issue persists feel free to drop us a mail along with the screenshot at redressal@kooapp.com as it helps our team understand the issue better.</p>
-
+                <div className="h1">REPORTED KOOS AND ACCOUNTS</div>
+                <div className="h2">Q. How can I report a Koo?</div>
+                <p>You may report a Koo by going to a particular Koo > : > Report Koo. Reported Koos are managed in accordance with legal requirements. If you would like to report a Koo for violation of the Information Technology Act, 2000 or its Rules or copyright violations, please see our Compliance page for further information</p>
+                <div className="h2">Q.How do I report a proﬁle?</div>
+                <p>You can report a particular profile Koo by going to a particular Koo> : > Report user.</p>
+                <div className="h2">Q. I reported a Koo. Why has no action been taken on it?</div>
+                <p>Koo is an intermediary that primarily enables online interaction between two or more users and allows them to create, upload, share, disseminate, modify or access information using Koo's services.</p>
+                <br /><br />
+                <p>Koo does not undertake any obligation to monitor user generated content, except where specifically mandated under applicable law. If a Koo violates Rule 3 of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 action may be taken. You can read more about the same on our Compliance page and the Community Guidelines page.</p>
+                <div className="h2">Q. I have received notification that my Koo has been reported. What happens next?</div>
+                <p>Koo is an intermediary that primarily enables online interaction between two or more users and allows them to create, upload, share, disseminate, modify or access information using Koo's services. Koo does not monitor user generated content, except where specifically mandated under applicable law.</p>
+                <br />
+                <p>You have received an auto generated Reported Koo notification because another user has reported your Koo.</p>
+                <br />
+                <p>If a Koo violates Rule 3 of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 action may be taken. You can read more about the same on our Compliance page and the Community Guidelines page.</p>
+                <div className="h1">LEGAL</div>
 
 
 
