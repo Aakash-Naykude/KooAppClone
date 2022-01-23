@@ -126,6 +126,26 @@ function Faq() {
                 <br />
                 <p>If a Koo violates Rule 3 of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 action may be taken. You can read more about the same on our Compliance page and the Community Guidelines page.</p>
                 <div className="h1">LEGAL</div>
+                <div className="h2">Where can I ﬁnd information about Compliance and guidelines?</div>
+                <p>Koo complies with the Information Technology Act, 2000 and the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021.</p>
+                <br />
+                <p>Please read Koo’s Terms of Service, Compliance and Community Guidelines pages for more information. Please write to any of the below for any compliance related questions</p>
+                <br />
+                <p>Koo Compliance Officer: compliance.officer@kooapp.com Koo Grievance Officer: grievance.officer@kooapp.com</p>
+                <div className="h2">Q. Why is my Koo removed?</div>
+                <p>Koo is an intermediary that primarily enables online interaction between two or more users and allows them to create, upload, share, disseminate, modify or access information using Koo's services. Koo does not monitor user generated content, except where specifically mandated under applicable law. If a Koo has been deleted it is likely to have violated applicable laws and Terms of Service, Compliance and Community Guidelines</p>
+                <div className="h2">Q. Someone is posting nude and/or objectionable content. How can I report it?</div>
+                <p>You can report using the "Report Koo" or "Report User" option within the Koo App. To report a Koo, please use the two dots on the top right corner of a Koo and from the index choose Report Koo. A Koo can be reported for any of the reasons listed in the index including Graphic, Obscene or Sexual Content.</p>
+                <br /><br />
+                <p>Grievances relating to violation of Rule 3 of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, including grievances by or on behalf an individual or child, relating to exposure of their private areas, full or partial nudity or depicting such individual or child in any sexual act or conduct, must be addressed to the Resident Grievance Officer at grievance.officer@kooapp.com or emailed to redressal@kooapp.com You can read more about the same on our Compliance page.</p>
+                <div className="h2">Q. How can I report content related to child abuse.</div>
+                <p>You can report using the "Report Koo" or "Report User" option within the Koo App. To report a Koo, please use the two dots on the top right corner of a Koo and from the index choose Report Koo. A Koo can be reported for any of the reasons listed in the index including Sexual Exploitation of a Child.</p>
+                <br />
+                <p>Grievances relating to violation of Rule 3 of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, including grievances by or on behalf an individual or child, relating to exposure of their private areas, full or partial nudity or depicting such individual or child in any sexual act or conduct, must be addressed to the Resident Grievance Officer at grievance.officer@kooapp.com or emailed to redressal@kooapp.com You can read more about the same on our Compliance page.</p>
+                <div className="h2">Q. My Koo has been deleted. How can I get it reinstated?</div>
+                <p>In accordance with the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, Koo provides User(s) with an adequate and reasonable opportunity to dispute an action taken on the content of a user. Such User(s) may request for reinstatement of access to such content. These requests will be decided within a reasonable time in accordance with law. You can read more about the same on our Compliance page.</p>
+                <div className="h2">Q. I want to report a copyright violation?</div>
+                <p>Koo does not undertake any obligation to monitor user generated content, except to the extent required by law. Koo is only an intermediary that primarily enables online interaction between two or more users and allows them to create, upload, share, disseminate, modify or access information using Koo's services. While Koo supports valid and legitimate claims of intellectual property ownership, it cannot and does not adjudicate any claims. In the first instance, parties must resolve any disputes relating to intellectual property amongst themselves or through legal process, before reporting to Koo. Please read more and use the reporting form on our Compliancepage.</p>
 
 
 
