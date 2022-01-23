@@ -195,6 +195,12 @@ function Faq() {
                 <p>In addition to these tabs we have a tab based on current affairs like Olympics, TNPL, Sports etc.</p>
                 <div className="h1">CONTACT US</div>
                 <div className="h2">Q. How can I get in touch with Koo?</div>
+                <p>Have a General Enquiry? Reach us on:  <a href="mailto:aakashnaykude123@gmail.com" className="mail">  aakashnaykude123@gmail.com  </a></p>
+                <p>Want to work with us? Reach Us on :   <a href="mailto:vani630145@gmail.com" className="mail"> vani630145@gmail.com </a> </p>
+                <p>Any Complaints? Reach Us on :  <a href="mailto:arnavi.gode96@gmail.com" className="mail" >arnavi.gode96@gmail.com</a></p>
+                <p>Any Technical Complaints?Reach Us on :  <a href="mailto:emailgeorgeabraham@gmail.com" className="mail" >emailgeorgeabraham@gmail.com</a></p>
+                <p>Have a Security Queries?Reach Us on :  <a href="mailto:ecmayankprajapati111@gmail.com" className="mail" >ecmayankprajapati111@gmail.com</a></p>
+
 
 
 
@@ -203,6 +209,10 @@ function Faq() {
 
             </div>
         </div>
+        <div className="all-queries" >
+            <Link to="/about"><span> About </span></Link>  <Link to="/contact"><span>Contact Us</span></Link>
+        </div>
+        <div className="copy">Copyright Koo 2022 ©</div>
     </div>
 }
 
