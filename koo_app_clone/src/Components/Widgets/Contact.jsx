@@ -6,7 +6,7 @@ function Contact() {
     return <div>
 
         <div id="back-to-feed" >
-            <Link to="/" >
+            <Link to="/feed" >
                 <img className="icon" src="https://www.kooapp.com/assets/2d634360.svg" alt="3" />
             </Link>
 

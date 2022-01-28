@@ -5,7 +5,7 @@ import "./Resource.css"
 function Resource() {
     return <div>
         <div className="Head" >
-            <Link to="/" >
+            <Link to="/feed" >
                 <img className="koo-icon" src="https://www.kooapp.com/assets/2d634360.svg" alt="3" />
             </Link>
 
