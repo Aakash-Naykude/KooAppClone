@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# koo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<table>
+<tr>
+<td>
+Koo is a micro-blogging platform just like Twitter. It is available as a website and on iOS and Google Play Store.Koo is an India-based app and focuses on allowing people to post in their language. When you are signing up, it lets you choose from Indian languages at the time of setup. However, you can only choose one language.
+  
+ You can post opinions on Koo publicly and follow other users as well. A feed shows posts from other users. The character limit for a 'Koo' is 400. One can sign up for Koo using their mobile number. Users have the option of linking their Facebook, LinkedIn, YouTube and Twitter feed to the Koo profile as well.
+  
+One can also post audio or video-based posts. A 'Koo' also lets users rely on hashtags, which is similar to Twitter. A user can also tag another person in their posts using the @ symbol, which is again similar to Twitter. There's also the option to post polls, share photos and videos on Koo.
+  
+Koo has been created by Bombinate Technologies Private Limited which is a Bangalore-based private company incorporated in 2015.
 
-## Available Scripts
+</td>
+</tr>
+</table>
 
-In the project directory, you can run:
+## koo Clone
 
-### `npm start`
+### Home Page
+This is our home page from where the user can login to out Koo app.
+![Home_page](https://user-images.githubusercontent.com/87421885/150675951-183787f8-7c90-4533-8a57-c035cd9a3bf1.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Sign up Page
+User enter their email or mobile number for sign Up 
+![Sign_in](https://user-images.githubusercontent.com/87421885/150676151-66ac8cab-c270-4f18-a615-c4750f9cea4e.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Post your comments
+Here user can post their comments and also add some emojis.
+![Post_request](https://user-images.githubusercontent.com/87421885/150676484-814bb41c-d44b-4577-a23a-e3623c45040a.png)
 
-### `npm test`
+### People Section
+in this section you can see the list of people to whom we can follow.
+![follow](https://user-images.githubusercontent.com/87421885/150676855-821e382c-b310-4e93-8f0d-827a6e4283dc.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Trending Vedio
+You can see the real-time data of that section which you want to explore.
+![Trending_Vedio](https://user-images.githubusercontent.com/87421885/150676014-aa05dd50-d48a-4fc1-8604-11634bcefca8.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Contact us Page
+If user have any query then he can contact us from here.
+![Contact_us](https://user-images.githubusercontent.com/87421885/150675989-fab4a035-5713-4922-8aec-db58f245ec20.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Faq Page
+Here user can see the  freqently asked question about the koo app
+![Faq](https://user-images.githubusercontent.com/87421885/150676224-92526542-682e-49a8-882d-1f79143965d1.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## [Getting Started]
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Execution..
+Want to run in your local Machine? Great!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run, follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Clone my repository ``
+- Open the code in your VS code
+- Initialize the server `npm run server` on terminal
+- Run port number on the browser `http://localhost:port/home`
+- Then you can Navigate through other pages from Home page
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Built with 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- CSS
+- Advance JavaScript (ES6)
+- node js
+- Express js
+- MongoDb
+- npm Packages
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Creators
 
-### Analyzing the Bundle Size
+- [@Aakash Naykude]()
+- [@George Abraham]()
+- [@Arnavi]()
+- [@Vani. A]()
+- [@Mayank Prajapati](https://github.com/Mayankpraja123)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
