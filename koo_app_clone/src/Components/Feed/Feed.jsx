@@ -13,10 +13,11 @@ export const Feed = () => {
     fetch("https://kooappcloneapis.herokuapp.com/userid/post")
       .then((res) => res.json())
       .then((json) => {
+        console.log(json);
+        json = json.reverse();
         setList(json);
       });
   };
-  console.log(list);
 
   var mybutton = document.getElementById("backtotopbtn");
 
@@ -67,7 +68,7 @@ export const Feed = () => {
           console.log(err);
         });
     } else {
-      alert("Please Sign in first to like, post, share.")
+      alert("Please Sign in first to like, post, share.");
     }
   };
   return (
