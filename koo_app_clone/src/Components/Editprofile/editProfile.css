@@ -31,11 +31,9 @@
   margin-top: 15px;
   border-radius: 12px;
 }
-.profilehead21 {
-  display: flex;
-}
 .profilehead21 > img {
-  padding: 12px;
+  padding: 15px;
+  width: 20%;
 }
 .profilehead21 > button {
   height: 25px;
@@ -101,5 +99,14 @@
   margin-left: -15px;
 }
 .user_info {
-  margin-left: 10%;
+  margin-left: 5%;
+  width: 90%;
+}
+.user_info > form > button {
+  margin-left: 39%;
+  padding: 7px;
+  border-radius: 15px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

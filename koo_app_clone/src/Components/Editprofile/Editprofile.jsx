@@ -40,7 +40,7 @@ function Editprofile() {
                 />
               </Link>
 
-              <h1>{userList.name}</h1>
+              <h1>Back To Feed</h1>
             </div>
             <div>
               <img
@@ -66,21 +66,99 @@ function Editprofile() {
                 src="https://www.kooapp.com/img/profilePlaceholder.svg"
                 alt="profile"
               />
+              <div>
+                <h1
+                  style={{
+                    fontSize: "22px",
+                    fontWeight: "600",
+                    margin: "30px 0 10px 25px",
+                  }}
+                >
+                  {userList.name}
+                </h1>
+                <h1
+                  style={{
+                    fontSize: "19px",
+                    fontWeight: "600",
+                    margin: "10px 0 10px 25px",
+                  }}
+                >
+                  {userList.username}
+                </h1>
+              </div>
             </div>
-            <h1>{userList.name}</h1>
-            <h2>{userList.username}</h2>
 
             <div className="user_info">
-              <input type="text" placeholder="Enter Name" />
-              <br />
-              <input type="text" placeholder="Enter Last Name" />
-              <br />
-              <input type="text" placeholder="Enter Username" />
-              <br />
-              <input type="file" placeholder="Choose Profile pic" />
-              <br />
-              <input type="text" placeholder="Enter Date of Birth" />
-              <br />
+              <form>
+                <label class="block">
+                  <span class="block text-sm font-medium text-slate-700">
+                    Name
+                  </span>
+                  <input
+                    type="text"
+                    name="name"
+                    disabled
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+      disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+      invalid:border-pink-500 invalid:text-pink-600
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+    "
+                    placeholder="Your Name???"
+                  />
+                </label>
+                <label class="block">
+                  <span class="block text-sm font-medium text-slate-700">
+                    User Name
+                  </span>
+                  <input
+                    type="email"
+                    name="username"
+                    class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+                    placeholder="Whats Your Nick Name"
+                  />
+                </label>
+                <label class="block">
+                  <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                    Email
+                  </span>
+                  <input
+                    type="email"
+                    name="email"
+                    class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+                    placeholder="you@example.com"
+                  />
+                </label>
+                <label class="block">
+                  <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                    Choose Profile Pic
+                  </span>
+                  <input
+                    type="file"
+                    class="block w-full text-sm text-slate-500
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-full file:border-0
+      file:text-sm file:font-semibold
+      file:bg-violet-50 file:text-violet-700
+      hover:file:bg-violet-100
+    "
+                  />
+                </label>
+                <label class="block">
+                  <span class="after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                    Enter Mobile Number
+                  </span>
+                  <input
+                    type="Number"
+                    name="mobilenumber"
+                    class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+                    placeholder="98**78**98"
+                  />
+                </label>
+                <button class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ...">
+                  Save changes
+                </button>
+              </form>
             </div>
           </div>
         </div>
