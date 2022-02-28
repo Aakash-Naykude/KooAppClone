@@ -17,8 +17,6 @@ function Viewpost({
 }) {
   const { addCommentToPost } = useContext(UserContext);
   const handleComment = (postid) => {
-    //addCommentToPost(idofpost);
-    console.log("hiii");
     localStorage.setItem("postid", postid);
   };
   return (

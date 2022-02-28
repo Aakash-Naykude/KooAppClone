@@ -6,12 +6,11 @@ import { PhoneLogin } from "./PhonePopup/PhoneLogin";
 import { EmailLogin } from "./EmailPopup/EmailLogin";
 import { EmailOtp } from "./EmailPopup/EmailOtp";
 import { PhoneOtp } from "./PhonePopup/PhoneOtp";
-import {LanguagePopup} from './LanguagePopup/LanguagePopup';
-
+import { LanguagePopup } from "./LanguagePopup/LanguagePopup";
 
 const LandingPage = () => {
   const [popup, setPopup] = useState(false);
-  const [lang, setLang] = useState(false)
+  const [lang, setLang] = useState(false);
   const [phone, setPhone] = useState(true);
   const [email, setEmail] = useState(true);
   const [otppopup, setOtppopup] = useState(true);
@@ -67,8 +66,8 @@ const LandingPage = () => {
           </div>
         </div>
         {/* {lang ? (  */}
-          <LanguagePopup setLang={setLang} lang={lang} ></LanguagePopup>
-      {/* //   ) : ("")
+        <LanguagePopup setLang={setLang} lang={lang}></LanguagePopup>
+        {/* //   ) : ("")
       // } */}
         {otppopup ? (
           phone ? (
@@ -148,14 +147,24 @@ const LandingPage = () => {
       <div className="footer-container">
         <div className="footer-wrap">
           <div className="footer-list">
-            <a href="/">About</a>
+            <Link to="/about">
+              <p style={{ color: "white" }}>About</p>
+            </Link>
             <a href="/">In the Press</a>
-            <a href="/">Resource Center</a>
-            <a href="/">Contact Us</a>
-            <a href="/">FAQs</a>
-            <a href="/">Sitemap</a>
+            <Link to="/resource">
+              <p style={{ color: "white" }}>Resource Center</p>
+            </Link>
+            <Link to="/contact">
+              <p style={{ color: "white" }}>Contact us</p>
+            </Link>
+            <Link to="/faq">
+              <p style={{ color: "white" }}>FAQs</p>
+            </Link>
+            <Link to="/sitemap">
+              <p style={{ color: "white" }}>Sitemap</p>
+            </Link>
           </div>
-          <div className="footer-cp-rt">Copyright Koo 2021 ©</div>
+          <div className="footer-cp-rt">Copyright Koo 2022 ©</div>
         </div>
       </div>
     </div>

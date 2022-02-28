@@ -104,19 +104,19 @@ export const Profile = () => {
           </div>
           <div className="profilehead3">
             <div>
-              <img src="https://www.kooapp.com/assets/cb39e6e3.svg" alt="koo" />
-              <h3>Koo</h3>
+              <img src="https://www.kooapp.com/assets/57662a37.svg" alt="koo" />
+              <h3 style={{ marginTop: "1px" }}>Koo</h3>
             </div>
             <div>
-              <img src="https://www.kooapp.com/assets/650e377a.svg" alt="koo" />
+              <img src="https://www.kooapp.com/img/Like1.5.svg" alt="koo" />
               <h3>Liked</h3>
             </div>
             <div>
-              <img src="https://www.kooapp.com/assets/4c618262.svg" alt="koo" />
+              <img src="https://www.kooapp.com/img/Comment1.5.svg" alt="koo" />
               <h3>Re-Koo & Comment </h3>
             </div>
             <div>
-              <img src="https://www.kooapp.com/assets/f82ff9f2.svg" alt="koo" />
+              <img src="https://www.kooapp.com/img/Like1.5.svg" alt="koo" />
               <h3>Mentions</h3>
             </div>
           </div>
