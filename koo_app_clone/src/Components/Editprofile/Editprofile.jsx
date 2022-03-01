@@ -3,9 +3,8 @@ import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./editProfile.css";
 function Editprofile() {
+  const fileRef = useRef();
   const userId = localStorage.getItem("userid");
-  const filePickerRef = useRef(null);
-  const [selectedFile, setSelectedFile] = useState(null);
   const [userList, setUserList] = useState([]);
   useEffect(() => {
     getUserData();
@@ -16,32 +15,51 @@ function Editprofile() {
         return res.json();
       })
       .then((res) => {
-        console.log(res.following);
         setUserList(res);
       })
       .catch((err) => {
         console.log(err);
       });
   };
-  const addImageToPost = (e) => {
-    const reader = new FileReader();
-    if (e.target.files[0]) {
-      reader.readAsDataURL(e.target.files[0]);
-    }
-
-    reader.onload = (readerEvent) => {
-      setSelectedFile(readerEvent.target.result);
-    };
-  };
   const [inp, setinp] = useState(null);
-
   const handleChange = (e) => {
-    let { name, value } = e.target;
+    let { name, value, type } = e.target;
+    value =
+      type === "file" ? URL.createObjectURL(fileRef.current.files[0]) : value;
     setinp({ ...inp, [name]: value });
   };
 
   const submittedData = (e) => {
-    console.log(inp);
+    var formData = new FormData();
+    formData.append("profile_pic", userId);
+    formData.append("profile_pic", fileRef.current.files[0]);
+    // console.log(fileRef.current.files[0], "cat");
+    console.log(formData);
+    const postData = {
+      name: inp.name,
+      username: inp.username,
+      email: inp.email,
+      mobilenumber: inp.mobilenumber,
+      profile_pic: inp.profile_pic,
+    };
+    console.log(postData);
+    fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`, {
+      method: "PATCH",
+      body: JSON.stringify(postData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        alert("Profile Edited successfully");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     e.preventDefault();
   };
 
@@ -159,8 +177,9 @@ function Editprofile() {
                   </span>
                   <input
                     type="file"
-                    onChange={addImageToPost}
-                    ref={filePickerRef}
+                    onChange={handleChange}
+                    ref={fileRef}
+                    name="profile_pic"
                     class="block w-full text-sm text-slate-500
       file:mr-4 file:py-2 file:px-4
       file:rounded-full file:border-0
