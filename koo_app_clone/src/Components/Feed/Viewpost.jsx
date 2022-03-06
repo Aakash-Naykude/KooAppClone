@@ -24,6 +24,8 @@ function Viewpost({
       <div className="cont1">
         {image ? (
           <img className="profilepic" src={image} alt="postimg" />
+        ) : profile_pic ? (
+          <img className="profilepic" src={profile_pic} alt="postimg" />
         ) : (
           <img
             className="profilepic"
@@ -31,7 +33,6 @@ function Viewpost({
             alt="postimg"
           />
         )}
-
         <div>
           <h1 className="name">{username}</h1>
           <h2 className="username">{username}</h2>

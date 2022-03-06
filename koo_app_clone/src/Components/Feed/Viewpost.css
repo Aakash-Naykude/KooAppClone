@@ -12,8 +12,9 @@
   gap: 2%;
 }
 .profilepic {
-  width: 48px;
+  width: 50x;
   border-radius: 50%;
+  height: 50px;
 }
 .name {
   font-size: 18px;

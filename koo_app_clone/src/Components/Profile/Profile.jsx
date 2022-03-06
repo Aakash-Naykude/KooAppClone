@@ -16,7 +16,7 @@ export const Profile = () => {
         return res.json();
       })
       .then((res) => {
-        console.log(res.following);
+        console.log(res);
         setUserList(res);
       })
       .catch((err) => {
@@ -64,10 +64,23 @@ export const Profile = () => {
           </div>
           <div className="profilehead2">
             <div className="profilehead21">
-              <img
+              {userList.profile_pic ? (
+                <img
+                  src={userList.profile_pic}
+                  alt="profile"
+                  className="profilePicMain"
+                />
+              ) : (
+                <img
+                  src="https://www.kooapp.com/img/profilePlaceholder.svg"
+                  alt="profile"
+                />
+              )}
+              {/* <img
                 src="https://www.kooapp.com/img/profilePlaceholder.svg"
                 alt="profile"
               />
+              <img src={userList.profile_pic} alt="profile" /> */}
 
               <button>
                 <Link to="/editprofile">Edit Profile </Link>

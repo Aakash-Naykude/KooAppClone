@@ -34,9 +34,6 @@
 .profilehead21 {
   display: flex;
 }
-.profilehead21 > img {
-  padding: 12px;
-}
 .profilehead21 > button {
   height: 25px;
   width: 90px;
@@ -46,6 +43,11 @@
   font-weight: 600;
   background-color: #809b9d;
   margin-left: 12px;
+}
+.profilePicMain {
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
 }
 .profilehead2 > h1 {
   font-size: 18px;

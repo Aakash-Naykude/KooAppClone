@@ -47,8 +47,10 @@ function AddInput() {
     if (userMail.length > 0) {
       console.log(selectedFile);
       const postData = {
+        profile_pic: userList.profile_pic,
         postdata: input,
-        username: userList.name,
+        name: userList.name,
+        username: userList.username,
         imageupload: selectedFile,
         likes: 0,
         commentNo: 0,

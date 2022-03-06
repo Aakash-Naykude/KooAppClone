@@ -205,12 +205,12 @@ export const Feed = () => {
               <Viewpost
                 key={e._id}
                 profile_pic={e.profile_pic}
+                title={e.postdata}
                 name={e.name}
                 username={e.username}
+                image={e.imageupload}
                 userid={e.userid}
                 postid={e._id}
-                title={e.postdata}
-                image={e.imageupload}
                 likes={e.likes}
                 commentNo={e.commentNo}
                 comments={e.comments}
