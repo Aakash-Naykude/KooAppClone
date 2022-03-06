@@ -1,9 +1,9 @@
 import React from "react";
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import FileBase64 from "react-file-base64";
 import "./editProfile.css";
 function Editprofile() {
-  const fileRef = useRef();
   const userId = localStorage.getItem("userid");
   const [userList, setUserList] = useState([]);
   useEffect(() => {
@@ -16,6 +16,7 @@ function Editprofile() {
       })
       .then((res) => {
         setUserList(res);
+        console.log(res);
       })
       .catch((err) => {
         console.log(err);
@@ -23,18 +24,19 @@ function Editprofile() {
   };
   const [inp, setinp] = useState(null);
   const handleChange = (e) => {
-    let { name, value, type } = e.target;
-    value =
-      type === "file" ? URL.createObjectURL(fileRef.current.files[0]) : value;
+    let { name, value } = e.target;
+    // value =
+    //   type === "file" ? URL.createObjectURL(fileRef.current.files[0]) : value;
+    console.log(inp);
     setinp({ ...inp, [name]: value });
   };
 
   const submittedData = (e) => {
-    var formData = new FormData();
-    formData.append("profile_pic", userId);
-    formData.append("profile_pic", fileRef.current.files[0]);
+    // var formData = new FormData();
+    // formData.append("profile_pic", userId);
+    // formData.append("profile_pic", fileRef.current.files[0]);
     // console.log(fileRef.current.files[0], "cat");
-    console.log(formData);
+    //console.log(formData);
     const postData = {
       name: inp.name,
       username: inp.username,
@@ -60,6 +62,7 @@ function Editprofile() {
       .catch((err) => {
         console.log(err);
       });
+    console.log(inp);
     e.preventDefault();
   };
 
@@ -102,10 +105,7 @@ function Editprofile() {
           </div>
           <div className="profilehead2">
             <div className="profilehead21">
-              <img
-                src="https://www.kooapp.com/img/profilePlaceholder.svg"
-                alt="profile"
-              />
+              <img src={userList.profile_pic} alt="profile" />
               <div>
                 <h1
                   style={{
@@ -175,7 +175,22 @@ function Editprofile() {
                   <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
                     Choose Profile Pic
                   </span>
-                  <input
+                  <FileBase64
+                    name="profile_pic"
+                    class="block w-full text-sm text-slate-500
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-full file:border-0
+      file:text-sm file:font-semibold
+      file:bg-violet-50 file:text-violet-700
+      hover:file:bg-violet-100
+    "
+                    type="file"
+                    multiple={false}
+                    onDone={({ base64 }) =>
+                      setinp({ ...inp, profile_pic: base64 })
+                    }
+                  />
+                  {/* <input
                     type="file"
                     onChange={handleChange}
                     ref={fileRef}
@@ -187,7 +202,7 @@ function Editprofile() {
       file:bg-violet-50 file:text-violet-700
       hover:file:bg-violet-100
     "
-                  />
+                  /> */}
                 </label>
                 <label class="block">
                   <span class="after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
