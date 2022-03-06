@@ -24,7 +24,7 @@ function UPfeed({ head, author, brif, image }) {
       </div>
       <div className="cont3">
         {image ? (
-          <img className="profilepic" src={image} alt="postimg" />
+          <img src={image} alt="postimg" />
         ) : (
           ""
           //   <img

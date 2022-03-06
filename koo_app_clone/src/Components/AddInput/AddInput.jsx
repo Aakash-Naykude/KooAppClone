@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Addinput.css";
+import FileBase64 from "react-file-base64";
 import { Picker } from "emoji-mart";
 import "emoji-mart/css/emoji-mart.css";
 import "./Modal.css";
@@ -13,6 +14,7 @@ mic.interimResults = true;
 mic.lang = "en-US";
 function AddInput() {
   const [input, setInput] = useState("");
+  const [picprofile, setPicprofile] = useState("");
   const [loading, setLoading] = useState(false);
   const [length, setLength] = useState(0);
   const filePickerRef = useRef(null);
@@ -51,14 +53,14 @@ function AddInput() {
         postdata: input,
         name: userList.name,
         username: userList.username,
-        imageupload: selectedFile,
+        imageupload: picprofile.imageupload,
         likes: 0,
         commentNo: 0,
         comments: "",
         userid: userId,
       };
       console.log(postData);
-      fetch("https://kooappcloneapis.herokuapp.com/userid/post", {
+      fetch(`http://localhost:4000/userid/post`, {
         method: "POST",
         body: JSON.stringify(postData),
         headers: {
@@ -239,12 +241,19 @@ function AddInput() {
         </div>
 
         <div id="inputcont4">
-          <div onClick={() => filePickerRef.current.click()}>
-            <input
+          <div>
+            {/* <input
               type="file"
               ref={filePickerRef}
               hidden
               onChange={addImageToPost}
+            /> */}
+            <FileBase64
+              name="imageupload"
+              type="file"
+              multiple={false}
+              //hidden
+              onDone={({ base64 }) => setPicprofile({ imageupload: base64 })}
             />
             <img
               src="https://www.kooapp.com/img/createMedia-img-new.svg"
