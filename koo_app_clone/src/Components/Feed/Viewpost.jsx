@@ -34,7 +34,7 @@ function Viewpost({
           />
         )}
         <div>
-          <h1 className="name">{username}</h1>
+          <h1 className="name">{name}</h1>
           <h2 className="username">{username}</h2>
         </div>
       </div>
