@@ -37,7 +37,7 @@ function Viewpost({
           {name ? (
             <h1 className="name">{name}</h1>
           ) : (
-            <h1 className="username">{username}</h1>
+            <h1 className="name">{username}</h1>
           )}
           {/* <h1 className="name">{name}</h1> */}
           <h2 className="username">{username}</h2>
