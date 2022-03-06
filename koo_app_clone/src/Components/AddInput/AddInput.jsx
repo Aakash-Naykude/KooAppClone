@@ -60,7 +60,7 @@ function AddInput() {
         userid: userId,
       };
       console.log(postData);
-      fetch(`http://localhost:4000/userid/post`, {
+      fetch(`https://kooappcloneapis.herokuapp.com/userid/post`, {
         method: "POST",
         body: JSON.stringify(postData),
         headers: {
