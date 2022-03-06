@@ -34,7 +34,12 @@ function Viewpost({
           />
         )}
         <div>
-          <h1 className="name">{name}</h1>
+          {name ? (
+            <h1 className="name">{name}</h1>
+          ) : (
+            <h1 className="username">{username}</h1>
+          )}
+          {/* <h1 className="name">{name}</h1> */}
           <h2 className="username">{username}</h2>
         </div>
       </div>
