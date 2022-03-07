@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../Context/UserContext";
 import "./sidebar.css";
 import SidebarOptions from "./SidebarOptions";
 // import { Button } from "@mui/material";
-
+import { LanguagePopup } from "../LandingPage/LanguagePopup/LanguagePopup";
 function Sidebar() {
+  const [lang, setLang] = useState(false);
   //const { username, handleUsername } = useContext(UserContext);
   const username = localStorage.getItem("userid");
 
@@ -53,9 +54,12 @@ function Sidebar() {
           <SidebarOptions
             Icon={"https://www.kooapp.com/assets/d6c4a8f9.svg"}
             text="Language"
+            // onClick={() => {
+            //   setLang(true);
+            // }}
           />
         </Link>
-
+        {/* <LanguagePopup setLang={setLang} lang={lang}></LanguagePopup> */}
         {username ? (
           <Link to="/notification">
             <SidebarOptions

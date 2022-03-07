@@ -58,6 +58,7 @@ function Editprofile() {
       .then((res) => {
         console.log(res);
         alert("Profile Edited successfully");
+        getUserData();
       })
       .catch((err) => {
         console.log(err);

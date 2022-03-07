@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { LanguagePopup } from "../LandingPage/LanguagePopup/LanguagePopup";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";
 import "./Language.css";
 export const Language = () => {
+  const [lang, setLang] = useState(true);
+  console.log(lang);
+  const handleClick = () => {
+    console.log("hello");
+    setLang(!lang);
+  };
   return (
     <div className="maincon">
       <div className="min-h-screen flex max-w-[1500px] mx-auto">
@@ -12,7 +19,7 @@ export const Language = () => {
           id="feedcont"
           className="flex-grow bg-[#F8F7F3] sm:ml-[50px] xl:ml-[300px]"
         >
-          <div
+          {/* <div
             id="header"
             className="bg-[#F8F7F3] border-gray-700 sticky top-0 z-40 "
           >
@@ -104,9 +111,9 @@ export const Language = () => {
                 Exclusive
               </h2>
             </Link>
-          </div>
+          </div> */}
 
-          <Link to="/addinput">
+          {/* <Link to="/addinput">
             <div className="inputbar">
               <div style={{ display: "flex" }}>
                 <img
@@ -124,7 +131,28 @@ export const Language = () => {
                 />
               </div>
             </div>
-          </Link>
+          </Link> */}
+          <div onClick={handleClick}>
+            <img
+              src="https://images.saymedia-content.com/.image/t_share/MTc0NDc1NTU1NzA4Njc1NDMy/what-is-language-the-five-basic-elements-of-language-defined.jpg"
+              alt="language"
+              onClick={handleClick}
+              style={{
+                height: "150px",
+                width: "600px",
+                marginLeft:"100px"
+              }}
+            />
+          </div>
+
+          <div
+            style={{
+              marginTop: "-55px",
+              marginLeft: "-370px",
+            }}
+          >
+            <LanguagePopup setLang={setLang} lang={lang}></LanguagePopup>
+          </div>
           <div className="pb-72">
             {/* {posts.map((post) => (
         <Post key={post.id} id={post.id} post={post.data()} />
