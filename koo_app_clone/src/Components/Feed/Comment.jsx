@@ -24,7 +24,7 @@ function Comment() {
   const userId = localStorage.getItem("userid");
   const [isListening, setIsListening] = useState(false);
   const [userList, setUserList] = useState([]);
-
+  const [commentList, setCommentList] = useState([]);
   const { comment } = useContext(UserContext);
   useEffect(() => {
     getUserData();
@@ -39,12 +39,14 @@ function Comment() {
       .then((res) => {
         console.log(res);
         setUserList(res);
+        setCommentList(res.comments);
       })
       .catch((err) => {
         console.log(err);
       });
   };
   const sendPost = () => {
+    console.log(input);
     if (loading) return;
     setLoading(true);
 
@@ -52,27 +54,27 @@ function Comment() {
     if (userMail.length > 0) {
       console.log(selectedFile);
       const postData = {
-        postdata: input,
-        username: userList.name,
-        imageupload: selectedFile,
-        likes: 0,
-        commentNo: 0,
-        comments: "",
-        userid: userId,
+        commentNo: userList.commentNo + 1,
+        comments: input,
       };
       console.log(postData);
-      fetch("https://kooappcloneapis.herokuapp.com/userid/post", {
-        method: "POST",
-        body: JSON.stringify(postData),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      let postIdtoCom = localStorage.getItem("postid");
+      fetch(
+        `https://kooappcloneapis.herokuapp.com/userid/post/${postIdtoCom}`,
+        {
+          method: "PATCH",
+          body: JSON.stringify(postData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
         .then((res) => {
           return res.json();
         })
         .then((res) => {
           console.log(res);
+          getUserData();
         })
         .catch((err) => {
           console.log(err);
@@ -191,7 +193,6 @@ function Comment() {
             </button>
           </div>
         </div>
-
         <div id="addPostToComment">
           <div className="addPostToCommentcont1">
             {userList.profile_pic ? (
@@ -238,7 +239,6 @@ function Comment() {
             /> */}
           </div>
         </div>
-
         <div id="cont3">
           <textarea
             style={{ padding: "10px" }}
@@ -254,7 +254,6 @@ function Comment() {
             alt="speaker"
           />
         </div>
-
         <div id="inputcont4">
           <div onClick={() => filePickerRef.current.click()}>
             <input
@@ -342,6 +341,25 @@ function Comment() {
             </div>
           )}
         </div>
+        <h1
+          style={{
+            fontSize: "23px",
+            fontWeight: 600,
+            marginLeft: "50px",
+            fontFamily: "fantasy",
+          }}
+        >
+          Comments : {userList.commentNo}
+        </h1>
+        {commentList.map((e) => (
+          <div>
+            <h1
+              style={{ fontSize: "20px", fontWeight: 600, marginLeft: "50px" }}
+            >
+              {e}
+            </h1>
+          </div>
+        ))}
       </div>
     </div>
   );

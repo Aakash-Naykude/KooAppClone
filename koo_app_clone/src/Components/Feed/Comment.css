@@ -9,6 +9,7 @@
 }
 #cont1 {
   display: flex;
+  margin-top: -15px;
   justify-content: space-between;
 }
 #insidecont1 {
