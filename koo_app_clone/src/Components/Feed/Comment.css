@@ -1,10 +1,7 @@
-/* #input_cont {
-  background-color: #f8f7f3;
-} */
 #inputCont {
   margin-left: 25%;
-  max-width: 700px;
-  margin-top: 39px;
+  max-width: 800px;
+  margin-top: 29px;
   border: 1px solid #e0e0e0;
   background-color: #fdfdfd;
   border-radius: 9px;
@@ -71,12 +68,12 @@
   background-color: white;
   border: 2px solid #f0f0f0;
   margin-top: 12px;
-  height: 230px;
+  height: 120px;
   border-radius: 10px;
 }
-#cont3 > input {
+#cont3 > textarea {
   margin: 2% 0 0 2%;
-  height: 75%;
+  height: 40%;
   width: 96%;
   text-align: left;
 }
@@ -110,6 +107,7 @@
   margin-left: 3%;
   border-radius: 12px;
   margin-top: 10px;
+  max-height: 700px;
 }
 #addPostToComment > .addPostToCommentcont1 {
   display: flex;
@@ -117,17 +115,18 @@
 }
 
 .addPostToCommentprofilepic {
-  width: 48px;
+  width: 52px;
   border-radius: 50%;
 }
 .addPostToCommentname {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  margin-top: 3px;
+  font-weight: 700;
 }
 .addPostToCommentusername {
   margin-top: 3px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 #addPostToComment > .addPostToCommentcont2 {
