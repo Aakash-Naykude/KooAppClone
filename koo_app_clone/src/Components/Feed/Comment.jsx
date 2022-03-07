@@ -55,7 +55,7 @@ function Comment() {
       console.log(selectedFile);
       const postData = {
         commentNo: userList.commentNo + 1,
-        comments: input,
+        comments: [...userList.comments, input],
       };
       console.log(postData);
       let postIdtoCom = localStorage.getItem("postid");
