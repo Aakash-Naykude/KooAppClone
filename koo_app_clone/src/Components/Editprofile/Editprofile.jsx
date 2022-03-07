@@ -40,7 +40,6 @@ function Editprofile() {
     const postData = {
       name: inp.name,
       username: inp.username,
-      email: inp.email,
       mobilenumber: inp.mobilenumber,
       profile_pic: inp.profile_pic,
     };

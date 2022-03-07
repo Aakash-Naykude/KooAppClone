@@ -168,8 +168,9 @@ function Comment() {
       <div
         id="inputCont"
         className="flex-grow bg-[#F8F7F3] sm:ml-[50px] xl:ml-[490px]"
+        style={{ marginTop: "-1px" }}
       >
-        <div id="cont1">
+        <div id="cont1" style={{ marginTop: "-15px" }}>
           <div id="insidecont1">
             <Link to={"/feed"}>
               <img
@@ -193,7 +194,7 @@ function Comment() {
             </button>
           </div>
         </div>
-        <div id="addPostToComment">
+        <div id="addPostToComment" style={{ marginTop: "-1px" }}>
           <div className="addPostToCommentcont1">
             {userList.profile_pic ? (
               <img
@@ -222,6 +223,7 @@ function Comment() {
               <img
                 className="addPostToCommentprofilepic"
                 src={userList.imageupload}
+                style={{ height: "270px" }}
                 alt="postimg"
               />
             ) : (
@@ -239,12 +241,12 @@ function Comment() {
             /> */}
           </div>
         </div>
-        <div id="cont3">
+        <div id="cont3" style={{ padding: "10px", height: "110px" }}>
           <textarea
-            style={{ padding: "10px" }}
+            style={{ padding: "10px", height: "55px" }}
             value={input}
             onChange={(e) => handleChange(e)}
-            className="input"
+            className="commentinput"
             type="text"
             placeholder="What's on your mind..."
           />
