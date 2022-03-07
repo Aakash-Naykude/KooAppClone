@@ -74,9 +74,9 @@
   height: 230px;
   border-radius: 10px;
 }
-#cont3 > input {
+#cont3 > textarea {
   margin: 2% 0 0 2%;
-  height: 75%;
+  height: 78%;
   width: 96%;
   text-align: left;
 }

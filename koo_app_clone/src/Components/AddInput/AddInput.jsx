@@ -225,7 +225,7 @@ function AddInput() {
           </p>
         </div>
         <div id="cont3">
-          <input
+          <textarea
             style={{ padding: "10px" }}
             value={input}
             onChange={(e) => handleChange(e)}
@@ -254,10 +254,6 @@ function AddInput() {
               multiple={false}
               //hidden
               onDone={({ base64 }) => setPicprofile({ imageupload: base64 })}
-            />
-            <img
-              src="https://www.kooapp.com/img/createMedia-img-new.svg"
-              alt="selectimg"
             />
           </div>
           <div onClick={() => filePickerRef.current.click()}>
