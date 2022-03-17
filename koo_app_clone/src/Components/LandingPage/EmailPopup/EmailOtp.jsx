@@ -37,7 +37,8 @@ export const EmailOtp = ({ settrigger, trigger, email, setEmail }) => {
             username: usernamename,
             email: userMail,
             mobilenumber: "",
-            profile_pic: "https://www.kooapp.com/img/profilePlaceholder.svg",
+            profile_pic:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzyALOcLp4ykOIC4bim8L0xZIvgfLLZEo-mg&usqp=CAU",
             followers: 0,
             following: 0,
           };
