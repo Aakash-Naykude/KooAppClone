@@ -32,7 +32,7 @@ function Comment() {
 
   const getUserData = () => {
     let postIdtoCom = localStorage.getItem("postid");
-    fetch(`https://kooappcloneapis.herokuapp.com/userid/post/${postIdtoCom}`)
+    fetch(`https://kooappapiservice.onrender.com/userid/post/${postIdtoCom}`)
       .then((res) => {
         return res.json();
       })
@@ -60,7 +60,7 @@ function Comment() {
       console.log(postData);
       let postIdtoCom = localStorage.getItem("postid");
       fetch(
-        `https://kooappcloneapis.herokuapp.com/userid/post/${postIdtoCom}`,
+        `https://kooappapiservice.onrender.com/userid/post/${postIdtoCom}`,
         {
           method: "PATCH",
           body: JSON.stringify(postData),

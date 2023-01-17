@@ -11,7 +11,7 @@ export const Profile = () => {
     getUserData();
   }, []);
   const getUserData = () => {
-    fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`)
+    fetch(`https://kooappapiservice.onrender.com/user/${userId}`)
       .then((res) => {
         return res.json();
       })

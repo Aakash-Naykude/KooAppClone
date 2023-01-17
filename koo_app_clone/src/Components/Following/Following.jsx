@@ -12,7 +12,7 @@ export const Following = () => {
   }, []);
 
   const getNews = () => {
-    fetch(`https://kooappcloneapis.herokuapp.com/following`)
+    fetch(`https://kooappapiservice.onrender.com/following`)
       .then((d) => d.json())
       .then((res) => {
         setNews(res);

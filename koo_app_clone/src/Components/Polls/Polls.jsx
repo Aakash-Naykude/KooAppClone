@@ -12,7 +12,7 @@ export const Polls = () => {
   }, []);
 
   const getNews = () => {
-    fetch(`https://kooappcloneapis.herokuapp.com/polls`)
+    fetch(`https://kooappapiservice.onrender.com/polls`)
       .then((d) => d.json())
       .then((res) => {
         setNews(res);

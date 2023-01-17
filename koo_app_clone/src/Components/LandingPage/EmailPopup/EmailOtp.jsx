@@ -18,7 +18,7 @@ export const EmailOtp = ({ settrigger, trigger, email, setEmail }) => {
   if (otp == userOtp) {
     console.log(userMail);
     localStorage.setItem("userid", userMail);
-    fetch(`https://kooappcloneapis.herokuapp.com/user/email/${userMail}`)
+    fetch(`https://kooappapiservice.onrender.com/user/email/${userMail}`)
       .then((res) => {
         return res.json();
       })
@@ -42,7 +42,7 @@ export const EmailOtp = ({ settrigger, trigger, email, setEmail }) => {
             followers: 0,
             following: 0,
           };
-          fetch("https://kooappcloneapis.herokuapp.com/user", {
+          fetch("https://kooappapiservice.onrender.com/user", {
             method: "POST",
             body: JSON.stringify(payload),
             headers: {

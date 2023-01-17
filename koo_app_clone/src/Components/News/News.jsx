@@ -12,7 +12,7 @@ export const News = () => {
   }, []);
 
   const getNews = () => {
-    fetch(`https://kooappcloneapis.herokuapp.com/new`)
+    fetch(`https://kooappapiservice.onrender.com/new`)
       .then((d) => d.json())
       .then((res) => {
         setNews(res);
@@ -170,11 +170,11 @@ export const News = () => {
           <div className="pb-72">
             {news.map((e) => (
               <UPfeed
-                key={e.publishedAt}
-                head={e.source.name}
-                author={e.author}
-                brif={e.content}
-                image={e.urlToImage}
+                key={e?.publishedAt}
+                head={e?.source?.name}
+                author={e?.author}
+                brif={e?.content}
+                image={e?.urlToImage}
               />
             ))}
           </div>

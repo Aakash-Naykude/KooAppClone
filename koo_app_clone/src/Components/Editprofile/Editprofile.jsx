@@ -10,7 +10,7 @@ function Editprofile() {
     getUserData();
   }, []);
   const getUserData = () => {
-    fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`)
+    fetch(`https://kooappapiservice.onrender.com/user/${userId}`)
       .then((res) => {
         return res.json();
       })
@@ -44,7 +44,7 @@ function Editprofile() {
       profile_pic: inp.profile_pic,
     };
     console.log(postData);
-    fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`, {
+    fetch(`https://kooappapiservice.onrender.com/user/${userId}`, {
       method: "PATCH",
       body: JSON.stringify(postData),
       headers: {

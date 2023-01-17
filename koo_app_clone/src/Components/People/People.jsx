@@ -10,7 +10,7 @@ export const People = () => {
     getUserData();
   }, []);
   const getPeople = () => {
-    fetch("https://kooappcloneapis.herokuapp.com/people")
+    fetch("https://kooappapiservice.onrender.com/people")
       .then((p) => p.json())
       .then((res) => {
         setList(res);
@@ -22,7 +22,7 @@ export const People = () => {
   const [following, setFollowing] = useState("");
   const [followingPeople, setFollowingPeople] = useState([]);
   const getUserData = () => {
-    fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`)
+    fetch(`https://kooappapiservice.onrender.com/user/${userId}`)
       .then((res) => {
         return res.json();
       })
@@ -44,7 +44,7 @@ export const People = () => {
         following: following + 1,
         followingPeople: [...followingPeople, eid],
       };
-      fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`, {
+      fetch(`https://kooappapiservice.onrender.com/user/${userId}`, {
         method: "PATCH",
         body: JSON.stringify(payload),
         headers: {

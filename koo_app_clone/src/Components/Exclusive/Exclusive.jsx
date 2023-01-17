@@ -12,7 +12,7 @@ export const Exclusive = () => {
   }, []);
 
   const getNews = () => {
-    fetch(`https://kooappcloneapis.herokuapp.com/exclusive`)
+    fetch(`https://kooappapiservice.onrender.com/exclusive`)
       .then((d) => d.json())
       .then((res) => {
         setNews(res);

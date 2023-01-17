@@ -13,7 +13,7 @@ export const Video = () => {
 
   const getNews = () => {
     fetch(
-      `https://kooappcloneapis.herokuapp.com/videos`
+      `https://kooappapiservice.onrender.com/videos`
     )
       .then((d) => d.json())
       .then((res) => {

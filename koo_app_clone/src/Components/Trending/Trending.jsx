@@ -12,7 +12,7 @@ export const Trending = () => {
   }, []);
 
   const getNews = () => {
-    fetch(`https://kooappcloneapis.herokuapp.com/trending`)
+    fetch(`https://kooappapiservice.onrender.com/trending`)
       .then((d) => d.json())
       .then((res) => {
         setNews(res);

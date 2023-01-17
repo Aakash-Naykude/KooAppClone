@@ -29,7 +29,7 @@ function AddInput() {
     getUserData();
   }, []);
   const getUserData = () => {
-    fetch(`https://kooappcloneapis.herokuapp.com/user/${userId}`)
+    fetch(`https://kooappapiservice.onrender.com/user/${userId}`)
       .then((res) => {
         return res.json();
       })
@@ -60,7 +60,7 @@ function AddInput() {
         userid: userId,
       };
       console.log(postData);
-      fetch(`https://kooappcloneapis.herokuapp.com/userid/post`, {
+      fetch(`https://kooappapiservice.onrender.com/userid/post`, {
         method: "POST",
         body: JSON.stringify(postData),
         headers: {
