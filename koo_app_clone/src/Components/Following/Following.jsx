@@ -170,11 +170,11 @@ export const Following = () => {
           <div className="pb-72">
             {news.map((e) => (
               <UPfeed
-                key={e.publishedAt}
-                head={e.source.name}
-                author={e.author}
-                brif={e.content}
-                image={e.urlToImage}
+                key={e?.publishedAt}
+                head={e?.source?.name}
+                author={e?.author}
+                brif={e?.content}
+                image={e?.urlToImage}
               />
             ))}
           </div>
